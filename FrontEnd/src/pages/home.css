@@ -1,0 +1,56 @@
+.home {
+    background-color: linen;
+}
+
+.home h1 {
+    color: darkblue;
+}
+
+.container-fluid{
+    background-color: white;
+}
+
+.App {
+    background-color: white;
+}
+
+.box{
+    background-color: darkcyan;
+    min-height: 200px;
+}
+
+.green{
+    background-color: green;
+
+}
+
+.blue{
+    background-color: blue;
+}
+
+@media (max-width: 767px) {
+    .box {
+        margin:10px 20px;
+        width: 100%;
+    }
+}
+
+@media (max-width: 1023px){
+    .box {
+        margin: 20px 50px;
+        border-radius: 4px;
+        border: 1px solid darkblue;
+        width: 70%;
+        margin-left: 15%;
+    }
+}
+
+@media(min-width: 1024px) {
+    .box {
+        margin: 50px 100px;
+        border-radius: 6px;
+        background-color: lightblue;
+        width: 50%;
+        margin-left: 15%;
+    }
+}
