@@ -10,14 +10,14 @@ function Footer() {
                     <div class="col-6 col-md-2 mb-3">
                         <h5>Name</h5>
                         <ul class="nav flex-column">
-                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Home</a></li>
+                            <li class="nav-item mb-2"><a href="/home" class="nav-link p-0 text-muted">Home</a></li>
                             <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Lobby</a></li>
                             <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">GamePage/Contest</a></li>
                             <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Pools</a></li>
                             <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Fantasy</a></li>
                             <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">SportsBook</a></li>
                             <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Media</a></li>
-                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Profile</a></li>
+                            <li class="nav-item mb-2"><a href="/pages/profile" class="nav-link p-0 text-muted">Profile</a></li>
                             <li class="nav-item mb-2"><a href="/pages/about" class="nav-link p-0 text-muted">About</a></li>
                         </ul>
                     </div>

@@ -13,12 +13,12 @@ function About() {
             <div className="row">
                 <div className="column">
                     <div className="card">
-                        <img src="" alt="Jane" style={{ width: '100%' }} />
+                        <img src="" alt="Marquice" style={{ width: '100%' }} />
                         <div className="container">
-                            <h2>Jane Doe</h2>
-                            <p className="title">CEO & Founder</p>
+                            <h2>Marquice Bowman</h2>
+                            <p className="title">Software Developer</p>
                             <p>Some text that describes me lorem ipsum ipsum lorem.</p>
-                            <p>jane@example.com</p>
+                            <p>Marquice@example.com</p>
                             <p><button className="button">Contact</button></p>
                         </div>
                     </div>
@@ -26,12 +26,12 @@ function About() {
             
                 <div className="column">
                     <div className="card">
-                        <img src="" alt="Mike" style={{ width: '100%' }} />
+                        <img src="" alt="Brandon Lile" style={{ width: '100%' }} />
                         <div className="container">
-                            <h2>Mike Ross</h2>
-                            <p className="title">Art Director</p>
+                            <h2>Brandon Lile</h2>
+                            <p className="title">Software Developer</p>
                             <p>Some text that describes me lorem ipsum ipsum lorem.</p>
-                            <p>mike@example.com</p>
+                            <p>Brandon@example.com</p>
                             <p><button className="button">Contact</button></p>
                         </div>
                     </div>
@@ -39,12 +39,12 @@ function About() {
             
                 <div className="column">
                     <div className="card">
-                        <img src="" alt="John" style={{ width: '100%' }} />
+                        <img src="" alt="Adam" style={{ width: '100%' }} />
                         <div className="container">
-                            <h2>John Doe</h2>
-                            <p className="title">Designer</p>
+                            <h2>Adam Young</h2>
+                            <p className="title">Software Developer</p>
                             <p>Some text that describes me lorem ipsum ipsum lorem.</p>
-                            <p>john@example.com</p>
+                            <p>Adam@example.com</p>
                             <p><button className="button">Contact</button></p>
                         </div>
                     </div>
