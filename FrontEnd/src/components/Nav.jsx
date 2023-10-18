@@ -1,33 +1,31 @@
-import { useState } from 'react';
+import React from 'react';
 
 function Nav() {
-    const [visibleNav, setVisibleNav] = useState(1);
 
-    function handleNavChange(option) {
-        setVisibleNav(option);
-    }
-
-    function getSubNav() {
-        // if (visibleNav === 1) {
-        //     return <HomeNav />;
-        // } else if (visibleNav === 2) {
-        //     return <SecondNav />;
-        // }
-        
-        return null;
-    }
 
     return (
-        <div className='main-nav'>
-            <ul>
-                <li onClick={() => handleNavChange(1)}>Home</li>
-                <li onClick={() => handleNavChange(2)}>Fantasy</li>
-                <li onClick={() => handleNavChange(3)}>SportsBook</li>
-                <li onClick={() => handleNavChange(4)}>Casino</li>
-            </ul>
-
-            {getSubNav()}
-        </div>
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <a class="navbar-brand" href="#">Navbar</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Features</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Pricing</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link disabled" href="#">Disabled</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
     );
 }
 
