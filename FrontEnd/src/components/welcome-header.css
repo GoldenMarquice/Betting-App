@@ -1,0 +1,93 @@
+.welcome-message, .welcome-user, .earn-rewards {
+    display: block;
+    flex-direction: column;
+    text-align: left;
+}
+
+.welcome-header-left{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 20%;
+    margin: 0px 20px;
+}
+
+.Welcome-header{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(234, 241, 241);
+    padding: 20px;
+    /* margin: 5px 40px 5px 140px; */
+}
+
+.Welcome-header .btn-welcome {
+    margin: 5px;
+}
+
+.welcome-header-right{
+    width: 40%;
+    /* justify-content: space-between; */
+    display: flex;
+    /* flex-direction: row; */
+}
+
+
+.bal, .upcoming-section, .live-section{
+    padding: 5px 30px;
+    border-right: solid 1px;
+    margin: 0px 3px;
+}
+
+@media (max-width:1024px){
+    .Welcome-header {
+        width: 100%;
+        justify-content: space-between;
+    }
+     .welcome-header-left{
+        width: 25%;
+    }
+    .welcome-header-right{
+        width: 60%;
+        align-items: center;
+        padding: 5px;
+        justify-content: space-between;
+    }
+    .btn-welcome{
+        margin: 5px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .Welcome-header {
+        margin: 10px 5px;
+        width:100%;
+        font-size: .75rem;
+        justify-content: space-between;
+        padding: 5px;
+    }
+    .welcome-header-left  {
+        width: 25%;
+        margin: 0px 5px;
+    }
+    .welcome-header-right{
+        width: 50%;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .upcoming-section, .live-section, .bal{
+        padding: 10px;
+    }
+    .Welcome-header .btn-welcome {
+        font-size: 10px;
+        margin: 5px;
+    }
+}
+
+
+@media screen and (min-width: 480px){
+    .Welcome-header{
+        width: 100%;
+    }
+}
