@@ -12,6 +12,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.min.js";
 
 import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Forum from "./pages/forum";
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/pages/about" element={<About />} />
             <Route path="/pages/profile" element={<Profile />} />
+            <Route path="/forum" element={<Forum />} />
             <Route path="/pages/lobby" element={<Lobby />} />
             <Route path="/pages/ContestServices" element={<ContestServices />} />
           </Routes>

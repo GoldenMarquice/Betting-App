@@ -7,6 +7,7 @@ function Header() {
   <a class="nav-link active" aria-current="page" href="#">Fantasy</a>
   <a class="nav-link" href="#">Sportsbook</a>
   <a class="nav-link" href="#">Casino</a>
+  <a class="nav-link" href="/forum">Forum</a>
 </nav>
 
     );
