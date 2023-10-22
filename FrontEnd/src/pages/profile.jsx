@@ -1,6 +1,7 @@
 import React from "react";
 import "./profile.css";
 
+
 function Profile() {
     return (
         <div className="profile">
@@ -14,7 +15,7 @@ function Profile() {
                             <div className="card-body">
                                 <h5 className="card-title">Wallet</h5>
                                 <p className="card-text">Balance</p>
-                                <a href="#" className="btn btn-primary">Update</a>
+                                <a href="/pages/wallet" className="btn btn-primary">Go to your Wallet</a>
                             </div>
                         </div>
                     </div>
@@ -25,7 +26,7 @@ function Profile() {
                             <div className="card-body">
                                 <h5 className="card-title">Add Funds</h5>
                                 <p className="card-text">Needed</p>
-                                <a href="#" className="btn btn-primary">Learn More</a>
+                                <a href="/pages/deposit" className="btn btn-primary">Learn More</a>
                             </div>
                         </div>
                     </div>
@@ -46,7 +47,7 @@ function Profile() {
                             <img src="card-image.jpg" className="card-img-top" alt="Card" />
                             <div className="card-body">
                                 <h5 className="card-title">Promotion Code</h5>
-                                <input type="text" maxLength={10} placeholder="Promotion Code" />
+                                <input type="text"  placeholder="Promotion Code" />
                                 <p className="card-text">This is the Promotion Entered</p>
                                 <a href="#" className="btn btn-primary">Submit Code</a>
                             </div>

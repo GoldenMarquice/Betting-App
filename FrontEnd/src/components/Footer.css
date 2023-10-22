@@ -1,3 +1,15 @@
+.footer .py-5 {
+    background-color: #0a58ca;
+    width: 100%;
+    flex-shrink: 1;
+}
+
+.footer .container-fluid{
+    background-color: #0a58ca;
+    width: 100%;
+    flex-shrink: 1;
+}
+
 .page-container {
     min-height: 100vh;
     display: flex;
@@ -9,7 +21,7 @@
 }
 
 .main-footer {
-    background-color: #333;
+    background-color: blue;
     color: #fff;
     padding: 20px;
 }
@@ -25,5 +37,31 @@
     cursor: pointer;
 }
 
-.sub-footer {
+.footer .sub-footer {
 }
+
+.footer .sdgku {
+    border-top: #acacac solid 1px;
+    background-color: #0a58ca;
+    width: 100%;
+    min-height: 100vh;
+    border-bottom: 5px solid #BB2626;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 3rem;
+}
+
+.footer .sdgku img {
+    width: 10rem;
+    margin-bottom: 1rem;
+    margin: 10px;
+}
+
+.footer .sdgku p {
+    font-size: 1rem;
+    font-style: italic;
+    color: #333333;
+}
+
