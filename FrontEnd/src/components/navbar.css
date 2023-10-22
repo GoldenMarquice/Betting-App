@@ -21,13 +21,19 @@
     flex-direction:row;
     align-items: center;
     text-align: end;
-    justify-content: space-between;
-    margin-right: 30px;
+    justify-content: space-around;
+    margin: 0px 10px;
     width: 30%;
 }
 
 .balance{
     display: block;
+}
+
+
+.button-section{
+    display: flex;
+    flex-direction: row;
 }
 
 @media (max-width: 1024px) {

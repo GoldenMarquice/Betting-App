@@ -1,6 +1,5 @@
 import "./App.css";
 import Footer from "./components/Footer";
-import Nav from "./components/Nav";
 import About from "./pages/about";
 import Home from "./pages/home";
 import Profile from "./pages/profile";
@@ -8,7 +7,7 @@ import Lobby from "./pages/lobby";
 import MainNav from "./components/navbar";
 import Header from "./components/header";
 import WelcomeHeader from "./components/welcome-header";
-
+import ContestServices from "./pages/contestServices";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.min.js";
 
@@ -27,6 +26,8 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/pages/about" element={<About />} />
             <Route path="/pages/profile" element={<Profile />} />
+            <Route path="/pages/lobby" element={<Lobby />} />
+            <Route path="/pages/ContestServices" element={<ContestServices />} />
           </Routes>
         </div>
 
