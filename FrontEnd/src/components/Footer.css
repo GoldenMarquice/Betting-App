@@ -25,5 +25,25 @@
     cursor: pointer;
 }
 
-.sub-footer {
+
+.sdgku {
+    border-top: #acacac solid 1px;
+    background-color: #FFFFFF;
+    border-bottom: 5px solid #BB2626;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 3rem;
+}
+
+.sdgku img {
+    width: 10rem;
+    margin-bottom: 1rem;
+}
+
+.sdgku p {
+    font-size: 1rem;
+    font-style: italic;
+    color: #333333;
 }
