@@ -87,12 +87,12 @@ function WelcomeHeader() {
                     </span>
                 </div>
                     <div className="button-section">
-                    <button type="button" className="btn btn-sm btn-success btn-welcome">
-                        Add Funds
-                    </button> 
-                    <button type="button" className="btn btn-sm btn-primary btn-welcome">
-                        View Promos
-                    </button>
+                        <button type="button" className="btn btn-success">
+                            Add Funds
+                        </button> 
+                        <button type="button" className="btn btn-outline-primary">
+                            View Promos
+                        </button>
                     </div>
             </div>
     </div>

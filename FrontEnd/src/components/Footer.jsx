@@ -78,6 +78,14 @@ function Footer() {
                         <li class="ms-3"><a class="link-dark" href="#"><svg class="bi" width="24" height="24"><use xlink: href="#facebook"></use></svg></a></li> */}
                     </ul>
                 </div>
+                <div class="sdgku">
+                    <a href="https://sdgku.edu/" target="blank">
+                        <img src="https://sdgku.edu/wp-content/uploads/2014/10/sdgku-logo-small.png" alt=""></img>
+                    </a> 
+                    <p>© 2022-2023 San Diego Global Knowledge University. All rights reserved.</p>
+                    <div class="social-media">
+                    </div>
+                </div>
             </footer>
         </div>
     );

@@ -1,0 +1,22 @@
+.league-buttons{
+    display:inline-flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 20px;
+    margin: 10px;
+    width: 100%;
+}
+
+.lobby #button{
+    padding: 10px;
+}
+
+/* .btn.btn-outline-primary {
+    margin: 20px;
+
+} */
+
+
+.lobby-slider .carousel-item img {
+    height: 400px;
+}

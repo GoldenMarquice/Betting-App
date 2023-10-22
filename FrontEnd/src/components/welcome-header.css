@@ -18,8 +18,12 @@
     justify-content: space-between;
     align-items: center;
     background-color: rgb(234, 241, 241);
-    padding: 20px;
+    padding: 15px;
     /* margin: 5px 40px 5px 140px; */
+}
+
+.button-section, .btn-success, .btn-outline-primary{
+    margin: 5px;
 }
 
 .Welcome-header .btn-welcome {
@@ -35,10 +39,16 @@
 
 
 .bal, .upcoming-section, .live-section{
-    padding: 5px 30px;
-    border-right: solid 1px;
-    margin: 0px 3px;
+    padding: 5px 20px;
+    margin: 0px 0px;
+    text-align: right;
 }
+
+.upcoming-section, .live-section{
+    border-right: solid 1px;
+}
+
+
 
 @media (max-width:1024px){
     .Welcome-header {
@@ -63,31 +73,38 @@
     .Welcome-header {
         margin: 10px 5px;
         width:100%;
-        font-size: .75rem;
-        justify-content: space-between;
+        justify-content: space-around;
         padding: 5px;
     }
+    .welcome-message, .upcoming-section, .live-section{
+        display: inline-block;
+        display: none;
+    }
     .welcome-header-left  {
-        width: 25%;
+        width: 50%;
         margin: 0px 5px;
     }
     .welcome-header-right{
-        width: 50%;
+        width: 70%;
         align-items: center;
         justify-content: space-between;
     }
     .upcoming-section, .live-section, .bal{
         padding: 10px;
     }
-    .Welcome-header .btn-welcome {
-        font-size: 10px;
-        margin: 5px;
-    }
+ 
 }
 
 
-@media screen and (min-width: 480px){
+/* @media (min-width: 425px){
     .Welcome-header{
         width: 100%;
     }
-}
+    .welcome-header-left  {
+        display: inline-block;
+        display: none;
+    }
+    .welcome-header-right  {
+        width: 100%;
+    }
+} */
