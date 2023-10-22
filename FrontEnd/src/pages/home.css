@@ -2,7 +2,6 @@
     width: 100%;
     display: block;
     flex-direction: column;
-    margin: 3%;
 }
 
 .carousel-slide{
@@ -45,3 +44,26 @@
 .why-section{
     display: block;
 }
+
+@media (max-width: 768px) { 
+    .card-section, .card-section2 {
+        display:block;
+    }
+    .reasons{
+        display: flex;
+        margin: -5px;
+    }
+ }
+
+ @media (max-width: 425px) { 
+    .reasons{
+        width: 100%;
+        display: block;
+        flex-direction: column;
+    }
+    .sports-betting, .casino-games, .fantasy-sports, .horse-betting, .watch-play, .stay-informed{
+        text-align: center;
+        align-items: center;
+        width: 100%;
+    }
+ }
