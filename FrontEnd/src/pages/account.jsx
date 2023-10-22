@@ -1,9 +1,11 @@
 import React from 'react';
+import Login from '../components/Login';
 
 function Account() {
     return (
         <div>
             <h1>Account</h1>
+            <Login/>
             <form>
                 <div className="form-group">
                     <label htmlFor="exampleInputEmail1">Email address</label>

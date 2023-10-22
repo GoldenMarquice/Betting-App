@@ -1,3 +1,4 @@
+import Login from "../components/Login";
 import "./home.css";
 
 function Home() {
@@ -16,6 +17,7 @@ function Home() {
                     </div>
                 </div>
             </div>
+            <Login/>
                 <h1>Explore the world of FanDuel sports and gaming</h1>
                 <p>The best place to bet on sports, play online games, and build your team.</p>
 
