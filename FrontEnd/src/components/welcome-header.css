@@ -22,6 +22,10 @@
     /* margin: 5px 40px 5px 140px; */
 }
 
+.button-section, .btn-success, .btn-outline-primary{
+    margin: 5px;
+}
+
 .Welcome-header .btn-welcome {
     margin: 5px;
 }
