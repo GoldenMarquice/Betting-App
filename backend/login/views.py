@@ -1,10 +1,9 @@
 from django.shortcuts import render
+from login.models import CustomUser
+from login.serializers import CustomUserSerializer
 from rest_framework import viewsets
 
-from .models import Login
-from .serializers import LoginSerializer
 
-
-class LoginViewSet(viewsets.ModelViewSet):
-    queryset = Login.objects.all()
-    serializer_class = LoginSerializer
+class UserViewSet(viewsets.ModelViewSet):
+    queryset = CustomUser.objects.all()
+    serializer_class = CustomUserSerializer
