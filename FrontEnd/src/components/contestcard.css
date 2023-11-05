@@ -3,18 +3,24 @@
     align-items: center;
     min-height: 85px;
     gap: 20px;
-    background-color: rgb(255, 255, 255);
+    background-color: rgb(245, 252, 253);
     padding-top: 16px;
     padding-bottom: 16px;
     padding-left: 16px;
     padding-right: 16px;
     position: relative;
+    margin-left: 3%;
+    margin-right: 3%;
+    margin-bottom: 2px;
+    border-style: solid;
+    border-color: rgb(207, 214, 219);
+    border-width: 1px;
+    border-radius: 4px;
 }
 
 .full-roster-button{
     display: flex;
     color: rgb(255, 255, 255);
-    background-color: rgb(14, 103, 179);
     align-items: center;
     padding-top: 0;
     padding-right: 8px;
@@ -23,4 +29,265 @@
     border-radius: 4px;
     width: 125px;
     height: 34px;
+}
+
+.roster-buttontxt{
+    display: flex;
+    flex-direction: column;
+    margin-left: 8px;
+    min-width: 0px;
+    white-space: nowrap;
+    overflow: hidden;
+    height: 34px;
+    max-width: 100%;
+}
+
+.League{
+    line-height: 1;
+    text-align: left;
+    font-weight: bold;
+}
+
+.roster{
+    line-height:1;
+    text-overflow: ellipsis;
+    min-width: 0px;
+    text-align: left;
+    max-width: 100%;
+    overflow: hidden;
+    letter-spacing: 1px;
+    font-size: 11px;
+    white-space: nowrap;
+    font-family: ProximaNovaCondensed;
+}
+
+.contest-cardtxt{
+    text-overflow: ellipsis;
+    min-width: 0px;
+    text-align: left;
+    align-items: flex-start;
+    max-width: 100%;
+    overflow: hidden;
+    background-color: transparent;
+    flex: 1 1 auto;
+    white-space: nowrap;
+    flex-direction: column;
+    display: flex;
+}
+
+.contest-card-title{
+    text-overflow: ellipsis;
+    min-width: 0px;
+    font-size: 18px;
+    max-width: 100%;
+    overflow: hidden;
+    background-color: transparent;
+    line-height: 1.2;
+    color: rgb(20, 147, 255);
+    white-space: nowrap;
+    display: block;
+}
+
+.contest-title-btn{
+    cursor: pointer;
+    text-align: left;
+    color: rgb(20, 147, 255);
+    text-decoration: none;
+    align-items: center;
+    font-weight: bold;
+    display: flex;
+}
+
+button{
+    background: none;
+    border: none;
+    margin: 0;
+    padding: 0;
+    font-size: inherit;
+    font-family: inherit;
+}
+
+.contest-title-time{
+    color: rgb(129, 142, 149);
+    text-overflow: ellipsis;
+    min-width: 0;
+    max-width: 100%;
+    overflow: hidden;
+    font-weight: normal;
+    letter-spacing: 1px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 12px;
+    padding-top: 0;
+    line-height: 1.2;
+    white-space: nowrap;
+    text-transform: uppercase;
+    display: block;
+}
+
+.contestcountbox{
+    flex: 0 0 140px;
+    text-align: left;
+    align-items: flex-start;
+    background-color: transparent;
+    flex-direction: column;
+    display: flex;
+}
+
+
+.contestcount{
+    color: rgb(31, 55, 91);
+    background-color: transparent;
+    line-height: 1.5;
+    white-space: nowrap;
+    font-size: 14px;
+    display: flex;
+}
+
+.contest-entry-status{
+    color: rgb(129, 142, 149);
+    font-size: 10px;
+    background-color: transparent;
+    letter-spacing: 1px;
+    font-family: 'Courier New', Courier, monospace;
+    padding-top: 0;
+    line-height: 1.2;
+    white-space: nowrap;
+    text-transform: uppercase;
+    display: block;
+}
+
+.contest-status{
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: row;
+    display: flex;
+}
+
+.contest-percentage{
+    flex: 0 1 auto;
+    text-align: right;
+    margin-right: 8px;
+    margin-bottom: 0px;
+}
+
+.progression{
+    width:4.8rem;
+    flex: 0 0 4.8rem;
+    margin-right: 8px;
+}
+
+.progbar{
+    border-bottom-right-radius: 2px;
+    border-bottom-left-radius: 2px;
+    border-top-right-radius: 2px;
+    border-top-left-radius: 2px;
+    height: 4px;
+    background-color: rgb(207, 214, 219);
+    overflow: hidden;
+    align-items: stretch;
+    display: flex;
+}
+
+.progress-fill{
+    border-bottom-right-radius: 2px;
+    border-bottom-left-radius: 2px;
+    border-top-right-radius: 2px;
+    border-top-left-radius: 2px;
+    background-color: rgb(20, 147, 255);
+}
+
+.prizetxtbox{
+    flex: 0 0 110px;
+    text-overflow: ellipsis;
+    min-width: 0;
+    text-align: left;
+    align-items: flex-start;
+    max-width: 100%;
+    overflow: hidden;
+    background-color: transparent;
+    white-space: nowrap;
+    flex-direction: column;
+    display: flex;
+}
+
+.prizemoneytxt{
+    color: rgb(54, 197, 101);
+    text-overflow: ellipsis;
+    min-width: 0px;
+    max-width: 100%;
+    overflow: hidden;
+    line-height: 1.2;
+    white-space: nowrap;
+    font-size: 14px;
+    font-weight: 800;
+    font-family: 'Courier New', Courier, monospace;
+    display: block;
+}
+
+.guaranteedtxt{
+    color: rgb(129, 142, 149);
+    text-overflow: ellipsis;
+    min-width: 0;
+    max-width: 100%;
+    font-size: 10px;
+    font-weight: normal;
+    letter-spacing: 1px;
+    overflow: hidden;
+    font-family: 'Courier New', Courier, monospace;
+    padding-top: 0;
+    line-height: 1.2;
+    white-space: nowrap;
+    text-transform: uppercase;
+    display: block;
+}
+
+.entrybtncontainer{
+    color: white;
+    flex : 0 0 140px;
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+}
+
+
+.entryfeebtn{
+    flex: 0 0 125px;
+    border: 1px solid rgb(15, 137, 241);
+    color: rgb(15, 137, 241);
+    text-shadow: none;
+    height: 40px;
+    border-radius: 4px;
+    line-height: 2rem;
+    justify-content: center;
+    font-weight: normal;
+    background-color: transparent;
+    text-decoration: none;
+    align-items: center;
+    font-size: 14px;
+    margin-left: auto;
+    box-shadow: none;
+    display: flex;
+}
+
+.entrybtntxt{
+    padding-left: 2px;
+    padding-bottom: 2px;
+    padding-right: 2px;
+    padding-top: 2px;
+    text-align: center;
+    background-color: transparent;
+    align-items: center;
+    flex-direction: column;
+    display: flex;
+}
+
+@media (max-width:425px){
+    .contest-card-container{
+        width: 100%;
+        display: inline-block;
+        flex-direction: column;
+        padding: 20px;
+        justify-content: space-around;
+    }
+    
 }

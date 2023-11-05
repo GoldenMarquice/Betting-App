@@ -1,22 +1,39 @@
 .league-buttons{
     display:inline-flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
     padding: 20px;
     margin: 10px;
+    width: 90%;
+}
+
+.league-buttons .btn-outline-primary{
+    background-color: #fff;
     width: 100%;
+    justify-content: space-between;
+    margin: 20px;
 }
 
 .lobby #button{
     padding: 10px;
 }
 
-.btn.btn-outline-primary {
+/* .btn.btn-outline-primary {
     margin: 20px;
 
-}
+} */
 
 
 .lobby-slider .carousel-item img {
     height: 400px;
+}
+
+.lobbytxt{
+    text-align: left;
+    margin-left: 3%;
+    font-size: 24px;
+}
+
+.lobby{
+    background-color: rgba(185,196,203,0.4);
 }

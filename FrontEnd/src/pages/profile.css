@@ -6,6 +6,13 @@
 
 .profile .card {
     flex: 0 0 calc(33.33% - 20px);
-    margin: 10px;
-    max-width: 300px;
+    margin: 15px;
+    height: 300px;
+    max-width: auto;
+    max-height: auto;
+}
+
+.profile input{
+    justify-content: center;
+    max-width: 150px;
 }

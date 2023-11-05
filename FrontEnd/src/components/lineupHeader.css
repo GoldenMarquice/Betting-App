@@ -1,0 +1,65 @@
+.body{
+    margin: 0;
+    padding: 0;
+}
+
+.lineup-header{
+    width: 100%;
+    display: block;
+    height: 155px;
+    border-bottom: 1px solid #3d3d3d;
+}
+
+.upper-header{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    padding: 10px;
+}
+
+.lineup-title{
+    width: 70%;
+    justify-content: left;
+}
+
+.time{
+    text-align: right;
+    width: 30%;
+}
+
+.title-contest{
+    text-align: left;
+    font-weight: 700;
+}
+
+.time-left{
+    font-size: 20px;
+}
+
+.start-time{
+    font-size: 12px;
+    text-transform: uppercase;
+}
+
+
+
+
+.lower-header{
+    display: flex;
+    padding: 10px;
+    
+}
+
+.tournament-block, .entry-block, .prize-block{
+    display: block;
+    padding: 0 20px;
+    text-align: left;
+    line-height: .75;
+    margin: 5px;
+}
+
+
+.lower-header #bottom{
+    font-size: 12px;
+    text-transform: uppercase;
+}

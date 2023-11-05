@@ -1,0 +1,109 @@
+.panel {
+    background-color: #fff;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-bottom: 1px solid gray;
+    margin-top: 3px;
+  }
+
+ul{
+    border-bottom: black;
+}
+
+.nav-underline .nav-link{
+    color: black;
+    width: 100%;
+    margin-right: 50px;
+    line-height: 1.5;
+}
+
+.nav-link.active span{
+    font-size: 16px;
+    font-weight: 600;
+    color: blue;
+}
+
+.nav-link span{
+    color: blue;
+}
+
+.nav-link p{
+    font-size: 12px;
+    font-weight: 400;
+}
+
+.pool-options{
+    width: 100%;
+    background-color: #fff;
+}
+
+.panel-options{
+    border-bottom: 1px solid gray;
+    width: 100%;
+    margin-top: 3px;
+}
+
+.flex-options{
+    display: flex;
+    flex-direction: row;
+    line-height: .5;
+    align-items: center;
+    width: 100%;
+}
+
+.dropdowns{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    
+}
+
+.For, .search {
+    margin-left: 20px;
+    flex: 1;
+}
+
+.For p{
+    text-transform: uppercase;
+    font-size: 9px;
+}
+
+.For button{
+    color: blue;
+    font-size: 14px;
+}
+
+.pick-bar{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+    padding: 10px 0;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.pick-bar-right{
+    display: flex;
+    justify-content: space-between;
+    width: 40%;
+}
+
+
+@media (max-width: 768px) {
+    .nav-underline .nav-link {
+      margin-right: 20px; 
+    }
+  
+    .For, .search {
+      margin-left: 10px; 
+    }
+  
+    .pick-bar {
+      padding: 5px 0; 
+      font-size: 10px; 
+    }
+  }

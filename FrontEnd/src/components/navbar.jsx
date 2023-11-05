@@ -1,10 +1,11 @@
 import React from 'react';
 import './navbar.css';
+import {Link} from "react-router-dom";
 
 function MainNav() {
     return (
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
-            <a class="navbar-brand" href="#">Logo</a>
+            <Link class="navbar-brand" to="/">Logo</Link>
                 <button class="navbar-toggler"
                     type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
@@ -12,16 +13,16 @@ function MainNav() {
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Lobby</a>
+                        <Link class="nav-link" aria-current="page" to="/pages/lobby">Lobby</Link>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">GamePage/Contest</a>
+                        <Link class="nav-link" to="/pages/contest">Contest</Link>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Pools</a>
+                        <a class="nav-link" href="#">Forum</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" aria-disabled="true">Profile</a>
+                        <Link class="nav-link" to="/pages/profile">Profile</Link>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" aria-disabled="true">About</a>
@@ -29,11 +30,16 @@ function MainNav() {
                     <li class="nav-item">
                         <a class="nav-link" aria-disabled="true">Social</a>
                     </li>
+                    <li class="nav-item">
+                        <a href="/pages/profile" class="nav-link">Profile</a>
+                        </li>
+                    <li class="nav-item">
+                        <a href="/pages/about" class="nav-link">About</a></li>
                     </ul>
                 </div>
         
 
-                <div className="container-fluid2">
+            <div className="container-fluid2">
                     <div className='nav-text'>
                         <span className="get-cash" data-test-id="data-chunk-value" theme="[object Object]">Get cash</span>
                         <span className="refer-friends" data-test-id="data-chunk-label" theme="[object Object]">Refer Friends</span>

@@ -3,6 +3,9 @@ import "./welcome-header.css";
 
 function WelcomeHeader() {
   return (
+
+
+
     <div className="Welcome-header">
         <div className="welcome-header-left">
             <svg
@@ -87,10 +90,10 @@ function WelcomeHeader() {
                     </span>
                 </div>
                     <div className="button-section">
-                        <button type="button" className="btn btn-success btn-welcome">
+                        <button type="button" className="btn btn-success">
                             Add Funds
                         </button> 
-                        <button type="button" className="btn btn-outline-primary btn-welcome">
+                        <button type="button" className="btn btn-outline-primary">
                             View Promos
                         </button>
                     </div>

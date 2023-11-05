@@ -1,0 +1,94 @@
+.wallet .card {
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 20px;
+    width: 300px;
+    margin: 0 auto;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.wallet .card h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.wallet .card p {
+    font-size: 18px;
+}
+
+.wallet .card input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+}
+
+.wallet .card button {
+    padding: 10px 20px;
+    font-size: 16px;
+    margin-right: 10px;
+    background-color: blue;
+}
+
+.wallet .card h3 {
+    font-size: 20px;
+    margin-top: 20px;
+}
+
+.wallet .card ul {
+    list-style: none;
+    padding: 0;.wallet .card {
+        background-color: #f0f0f0;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        padding: 20px;
+        width: 300px;
+        margin: 0 auto;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+    
+    .wallet .card h2 {
+        font-size: 24px;
+        margin-bottom: 10px;
+    }
+    
+    .wallet .card p {
+        font-size: 18px;
+    }
+    
+    .wallet .card input {
+        width: 100%;
+        padding: 10px;
+        margin: 10px 0;
+    }
+    
+    .wallet .card button {
+        padding: 10px 20px;
+        font-size: 16px;
+        margin-right: 10px;
+        background-color: blue;
+        color: white;
+        border: none;
+        cursor: pointer;
+    }
+    
+    .wallet .card h3 {
+        font-size: 20px;
+        margin-top: 20px;
+    }
+    
+    .wallet .card ul {
+        list-style: none;
+        padding: 0;
+    }
+    
+    .wallet .card li {
+        font-size: 16px;
+        margin: 5px 0;
+    }
+}
+
+.wallet .card li {
+    font-size: 16px;
+    margin: 5px 0;
+}
