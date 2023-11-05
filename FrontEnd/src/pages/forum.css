@@ -1,4 +1,13 @@
 .post-editor {
     margin: 1rem 20%;
 }
-
+.panel-body {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+}
+.panel-body input {
+    width: 75%;
+    margin: auto;
+}

@@ -1,7 +1,12 @@
 import axios from 'axios';
 
-class ContestService {
-    
+class BlogService {
+
+    async getBlogPosts() {
+        // get data from API
+        const response = await axios.get("http://127.0.0.1:8000/api/blog/");
+        return response.data;
+    }
 
     async getContestServices() {
             // get data from API
@@ -32,6 +37,11 @@ class ContestService {
         // ];
     }
 
+    async saveBlogPost(post) {
+        const response = await axios.post("http://127.0.0.1:8000/api/blog/", post);
+        return response.data;
+    }
+    
     getContestList() {
         return [
             {
@@ -141,4 +151,4 @@ class ContestService {
 
 }
 
-export default new ContestService() ;
+export default new BlogService() ;

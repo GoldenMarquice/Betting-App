@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'contest',
     'corsheaders',
     'rest_framework',
+    'blog',
     'rest_framework.authtoken',
     'wallet',
     'login',
