@@ -7,12 +7,12 @@ import Lobby from "./pages/lobby";
 import MainNav from "./components/navbar";
 import Header from "./components/header";
 import WelcomeHeader from "./components/welcome-header";
-import ContestServices from "./pages/contestServices";
+import Blog from "./pages/blog";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.min.js";
 
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import Forum from "./pages/forum";
+import ForumPage from "./pages/forum-page";
 
 function App() {
   return (
@@ -27,9 +27,9 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/pages/about" element={<About />} />
             <Route path="/pages/profile" element={<Profile />} />
-            <Route path="/forum" element={<Forum />} />
+            <Route path="/forum" element={<ForumPage />} />
             <Route path="/pages/lobby" element={<Lobby />} />
-            <Route path="/pages/ContestServices" element={<ContestServices />} />
+            <Route path="/pages/Blog" element={<Blog />} />
           </Routes>
         </div>
 
