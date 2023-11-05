@@ -1,5 +1,6 @@
 import Login from "../components/Login";
 import "./home.css";
+import FantasyFootballCard from "../components/fantasyfootballcard";
 
 function Home() {
     return (
@@ -7,13 +8,13 @@ function Home() {
             <div id="carouselExampleSlidesOnly" className="carousel-slide"  data-bs-ride="carousel">
                 <div className="carousel-inner">
                     <div className="carousel-item active">
-                        <img src="https://via.placeholder.com/800x400" className="d-block w-100" alt="Image 1" />
+                        <img src="https://via.placeholder.com/800x400" className="d-block w-100" alt="Image 1"/>
                     </div>
                     <div className="carousel-item">
-                        <img src="https://via.placeholder.com/800x400" className="d-block w-100" alt="Image 2" />
+                        <img src="https://via.placeholder.com/800x400" className="d-block w-100" alt="Image 2"/>
                     </div>
                     <div className="carousel-item">
-                        <img src="https://via.placeholder.com/800x400" className="d-block w-100" alt="Image 3" />
+                        <img src="https://via.placeholder.com/800x400" className="d-block w-100" alt="Image 3"/>
                     </div>
                 </div>
             </div>
@@ -72,6 +73,7 @@ function Home() {
                             <p>FanDuel isn't just about playing; it's about learning too. With FanDuel Research, you can read up on the latest NFL news, NBA news, MLB news, NHL news, and even College Football news. It's also easy to catch up on all the odds, whether it's NFL Odds, NBA Odds, or College Football Odds.</p>
                         </div>
                     </div>
+                    <FantasyFootballCard />
                 </section>
 
             </div>

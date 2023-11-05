@@ -1,0 +1,64 @@
+.fantasy-body {
+    display: flex;
+    flex-wrap: wrap; /* Allow items to wrap to the next line */
+    justify-content: space-between;
+    padding: 20px;
+    align-items: center;
+    background-color: rgba(185, 196, 203, 0.4);
+    line-height: 1;
+}
+
+.left-side{
+    width: 100%;
+    text-align: left;
+}
+
+.between-components{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    text-align: center;
+}
+.between-components h1{
+    font-size: 30px;
+    font-weight: 300;
+}
+
+.right-side{
+    width: 100%;
+}
+
+@media (min-width: 768px) {
+    .left-side {
+      width: 65%;
+    }
+  
+    .right-side {
+      width: 33%;
+    }
+  }
+
+
+.lineup-txt{
+    text-align: left;
+    margin-left: 700px;
+}
+
+.remaining-salary h1, .player-avg h1 {
+    font-size: 20px;
+}
+
+.lineup-txt h1{
+    font-size: 25px;
+}
+
+.salary-txt{
+    display: flex;
+}
+
+.bottom{
+    font-size: 10px;
+    text-transform: uppercase;
+}

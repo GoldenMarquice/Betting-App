@@ -1,0 +1,9 @@
+.lineup-card{
+    width: 100%;
+    background-color: #fff;
+}
+
+.empty-slot-txt{
+    text-align: left;
+    padding: 50px;
+}
