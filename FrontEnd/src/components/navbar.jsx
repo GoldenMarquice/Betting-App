@@ -30,6 +30,11 @@ function MainNav() {
                     <li class="nav-item">
                         <a class="nav-link" aria-disabled="true">Social</a>
                     </li>
+                    <li class="nav-item">
+                        <a href="/pages/profile" class="nav-link">Profile</a>
+                        </li>
+                    <li class="nav-item">
+                        <a href="/pages/about" class="nav-link">About</a></li>
                     </ul>
                 </div>
         
