@@ -6,12 +6,13 @@ import Profile from "./pages/profile";
 import Lobby from "./pages/lobby";
 import MainNav from "./components/navbar";
 import Header from "./components/header";
+import Contest from "./pages/contest";
+import FantasyDraft from './pages/fantasydraft';
 import WelcomeHeader from "./components/welcome-header";
 import ContestServices from "./pages/contestServices";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.min.js";
-
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Route, Routes} from "react-router-dom";
 import Forum from "./pages/forum";
 
 function App() {
@@ -19,8 +20,7 @@ function App() {
     <BrowserRouter>
       <Header />
       <MainNav />
-      <WelcomeHeader />
-
+      
       <div className="container-fluid">
         <div className="App">
           <Routes>
@@ -29,7 +29,8 @@ function App() {
             <Route path="/pages/profile" element={<Profile />} />
             <Route path="/forum" element={<Forum />} />
             <Route path="/pages/lobby" element={<Lobby />} />
-            <Route path="/pages/ContestServices" element={<ContestServices />} />
+            <Route exact path="/pages/contest" element={<Contest />} />
+            <Route exact path="/pages/fantasydraft" element={<FantasyDraft />} />
           </Routes>
         </div>
 

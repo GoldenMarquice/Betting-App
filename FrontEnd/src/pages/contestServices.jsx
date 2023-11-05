@@ -3,7 +3,7 @@ import ContestService from "../services/contestService";
 
 function ContestServices() {
     const [allData, setAllData] = useState([]);
-     
+    
 
     async function loadData(){
         const data = await ContestService.getContestServices();

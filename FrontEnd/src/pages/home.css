@@ -4,6 +4,14 @@
     flex-direction: column;
 }
 
+.why-section h1{
+    text-align: center;
+}
+
+.home h1{
+    text-align: center;
+}
+
 .carousel-slide{
     margin-bottom: 60px;
 }
