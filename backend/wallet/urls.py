@@ -8,5 +8,6 @@ router = DefaultRouter()
 router.register('wallet', views.WalletViewSet)
 
 urlpatterns = [
-    path('', include(router.urls))
+    path('', include(router.urls)),
+    # path('update_balance/', update_balance, name='update_balance'),
 ]

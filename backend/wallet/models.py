@@ -1,10 +1,12 @@
+from django.conf import settings
 from django.db import models
 
 
 class Wallet(models.Model):
     balance = models.FloatField(null=True, blank=True)
-    #user= models.CharField()
+    # user= models.CharField()]
 
+    user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE, default=1)
 
 
 class Transaction(models.Model):
@@ -41,5 +43,6 @@ class CurrentGames(models.Model):
 class HistoricalData(models.Model):
     gamesPlayed = models.TextField(max_length=125)
     betsMade =models.TextField(max_length=125)
+    
 
 # Create your models here.
