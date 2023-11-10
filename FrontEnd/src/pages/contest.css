@@ -1,0 +1,162 @@
+.Contest{
+    background-color:rgba(185,196,203,0.4) ;
+    width: 100%;
+}
+
+.Contest-Nav{
+    padding-bottom:20px;
+    padding-right: 20px;
+}
+
+.Contest-Nav .nav-underline{
+    margin: 20px -110px 20px 130px;
+    height: 100px;
+    width: 88%;
+    justify-content: space-between;
+    background-color: #fff;
+    
+}
+
+.Contest-Nav .nav-underline .nav-item{
+    width: 15%;
+    display: block;
+    text-align: left;
+    color: #3d3d3d;
+}
+
+.Contest-Nav .nav-item .nav-link {
+    text-align: left;
+    font-weight: 700;
+    color: #076cdf;
+}
+
+.Contest-Nav .nav-underline .nav-item p {
+    font-size:small;
+    text-align: left;
+    padding-left: 5px;
+}
+
+.game-styles{
+    background-color: #fff;
+    width: 70%;
+    margin-left: 130px;
+    padding: 10px;
+    margin-bottom: 50px;
+    font-size: 12px;
+    border-radius: 4px;
+    text-align: left;
+}
+
+.game-styles label{
+    font-weight: 700;
+
+}
+.game-styles h5{
+    font-size: 16px ;
+}
+
+.slates{
+    background-color: #fff;
+    width: 70%;
+    margin-left: 130px;
+    padding: 10px;
+    margin-bottom: 50px;
+    border-radius: 4px;
+    text-align: left;
+}
+
+.slates .form-check p{
+    font-weight: 700;
+    font-size: 10px;
+    text-transform: uppercase;
+}
+
+.slates h5{
+    font-size: 16px;
+}
+
+.entry-fee{
+    width: 70%;
+    background-color: #fff;
+    margin-left: 130px;
+    padding: 10px;
+    border-bottom: 1px solid #3d3d3d;
+}
+
+.entry-fee h5{
+    text-align: left;
+    padding: 10px;
+    font-size: 16px;
+}
+
+.entry-fee-range{
+    display: flex;
+    justify-content: space-between;
+}
+
+.entry-type{
+    background-color: #fff;
+    width: 70%;
+    margin-left: 130px;
+    text-align: left;
+    padding: 20px;
+    display: block;
+    border-bottom: 1px solid #3d3d3d;
+}
+
+.entry-type h5{
+    font-size: 16px;
+}
+
+.show-me-contest{
+    background-color: #fff;
+    width: 70%;
+    margin-left: 130px;
+    text-align: left;
+    padding: 20px;
+}
+
+.show-me-contest .form-check p{
+    font-size: 12px;
+}
+
+.show-me-contest h5{
+    font-size: 16px;
+
+}
+
+.contest-body{
+    display: flex;
+    width: 100%;
+    padding-right: 30px;
+}
+
+.contest-slot{
+    width: 100%;
+    padding-bottom: 20px;
+}
+
+.game-options{
+    padding-bottom: 50px;
+}
+
+@media (max-width: 768px){
+    .contest-body{
+        display: block;
+        flex-direction: column;
+        padding: 0;
+        margin: 0;
+        justify-content: center;
+    }
+    .btn-group{
+        display: block;
+        flex-direction: column;
+        width: 30%;
+        justify-content: center;
+        margin-right: 0;
+    }
+    .Contest-Nav{
+        width: 50%;
+        display: block;
+    }
+}

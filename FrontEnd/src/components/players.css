@@ -1,0 +1,25 @@
+.player-card{
+    background-color: #fff;
+    width: 100%;
+}
+
+.player-slot{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.player-slot-left{
+    display: flex;
+    flex-direction: row;
+    width: 25%;
+    padding-right: 50px;
+}
+
+.player-slot-right{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 45%;
+}
