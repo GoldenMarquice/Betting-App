@@ -4,7 +4,7 @@ import './navbar.css';
 function MainNav() {
     return (
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
-            <a class="navbar-brand" href="#">Logo</a>
+            <a class="navbar-brand" href="/pages/home">Logo</a>
                 <button class="navbar-toggler"
                     type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
@@ -21,19 +21,19 @@ function MainNav() {
                         <a class="nav-link" href="#">Pools</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" aria-disabled="true">Profile</a>
+                        <a href="/pages/profile" class="nav-link" aria-disabled="true">Profile</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" aria-disabled="true">About</a>
+                        <a href="/pages/about" class="nav-link" aria-disabled="true">About</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" aria-disabled="true">Social</a>
                     </li>
                     <li class="nav-item">
-                        <a href="/pages/profile" class="nav-link">Profile</a>
+                        <a href="/pages/login" class="nav-link">Login</a>
                         </li>
                     <li class="nav-item">
-                        <a href="/pages/about" class="nav-link">About</a></li>
+                        <a href="/pages/Signup" class="nav-link">Sign Up</a></li>
                     </ul>
                 </div>
         
@@ -52,7 +52,7 @@ function MainNav() {
                         <span className="cash-balance" data-test-id="data-chunk-value" theme="[object Object]">$0</span> <br></br>
                         <span className="navbar-balance" data-test-id="data-chunk-label" theme="[object Object]">Balance</span>
                     </div>
-                        <button type="button" className="btn btn-success" id="btn-funds">Add Funds</button>
+                       <a href="/pages/deposit"> <button type="button" className="btn btn-success" id="btn-funds">Add Funds</button></a>
                 </div>
     </nav>
     );

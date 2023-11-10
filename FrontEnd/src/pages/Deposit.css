@@ -1,0 +1,226 @@
+.deposit {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f5f5f5;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+
+.deposit header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.deposit .deposit header-button {}
+
+.deposit-header-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.deposit deposit-secure-text {
+    font-weight: bold;
+    font-size: 24px;
+}
+
+.deposit-sports-text {
+    font-style: italic;
+    font-size: 18px;
+}
+
+
+.deposit .deposit-amount {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+
+}
+
+.deposit-amount h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.deposit-amount-options-inner {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.deposit-amount-card {
+
+    cursor: pointer;
+    width: calc(20% - 10px);
+    padding: 10px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-weight: bold;
+
+}
+
+.deposit-amount-card.selected {
+    border-color: #007bff;
+}
+
+.deposit-amount-value {
+    font-size: 24px;
+}
+
+.deposit-amount-recommended {
+    color: #007bff;
+}
+
+.deposit .deposit-payment-details {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.deposit-payment-details h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.deposit-payment-options {
+    margin-top: 20px;
+}
+
+.deposit-payment-legend {
+    font-weight: bold;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.deposit-recommended-type {
+    display: flex;
+    align-items: center;
+}
+
+.deposit-recommended-text {
+    font-weight: bold;
+    font-size: 16px;
+    color: #007bff;
+}
+
+.deposit-payment-radio {
+    margin-right: 5px;
+}
+
+.deposit-payment-label {
+    font-size: 16px;
+}
+
+.deposit-card-label {
+    font-weight: bold;
+}
+
+.custom-payment-details {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.custom-payment-details h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.deposit .custom-form-group {
+    margin-bottom: 10px;
+}
+
+.custom-form-group label {
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.custom-form-group input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.custom-form-group input[type="checkbox"] {
+    margin-right: 5px;
+}
+
+.deposit-product-info {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+.deposit-product-balance {
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.deposit-balance-amount {
+    font-weight: bold;
+    font-size: 20px;
+    margin-left: 10px;
+}
+
+.deposit-wallet-switcher {
+    margin-top: 20px;
+}
+
+.deposit-switch-wallet-button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.deposit-minimum-amount {
+    margin-top: 20px;
+    font-size: 16px;
+}
+
+.deposit-minimum-amount p {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.deposit-responsible-gaming {
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+.submit-payment-button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 16px;
+    margin-top: 20px;
+}
+
+@media (max-width: 600px) {
+    .deposit {
+        max-width: 100%;
+        padding: 10px;
+    }
+}

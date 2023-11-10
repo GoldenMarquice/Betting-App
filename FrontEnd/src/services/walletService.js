@@ -1,33 +1,28 @@
-
+import axios from 'axios';
 
 class WalletService {
+    async getWallet() {
+        // Get data from the API
+        try {
+            const response = await axios.get("https://127.0.0.1:8000/api/wallet/");
+            return response.data;
+        } catch (error) {
+            console.error('Error fetching wallet data:', error);
+            throw error; // You may want to handle this error in your component
+        }
+    }
 
-    getServices () {
-        //TODO: ferch data from server
-
-        //temp. return mock data
-        return[
-            {
-                id: '1234532',
-                title: "Basic Wash",
-                image: "http://",
-                price: 56.83
-            },
-            {
-                id: '4532',
-                title: "Polish",
-                image: "http://",
-                price: 6.83
-            },
-            {
-                id: '1234532',
-                title: "Supreme",
-                image: "http://",
-                price: 56.83
-            },
-        ];
+    updateBackendBalance(newBalance) {
+        return axios.post('/update_balance/', { new_balance: newBalance })
+            .then(response => {
+                console.log(response.data.message);
+                return response.data; // Return data for further handling in your component
+            })
+            .catch(error => {
+                console.error('Error updating balance:', error);
+                throw error; // You may want to handle this error in your component
+            });
     }
 }
 
-
-export default new WalletService();
+export default WalletService;

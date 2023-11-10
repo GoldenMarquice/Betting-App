@@ -1,13 +1,19 @@
 import "./App.css";
 import Footer from "./components/Footer";
+import Login from "./components/Login";
 import Header from "./components/header";
 import MainNav from "./components/navbar";
 import Wallet from "./components/wallet";
 import WelcomeHeader from "./components/welcome-header";
+import Deposit from "./pages/Deposit";
+import Promotions from "./pages/Promotions";
+import Signup from "./pages/Signup";
+import Withdraw from "./pages/Withdraw";
 import About from "./pages/about";
 import Home from "./pages/home";
 import Profile from "./pages/profile";
-import Services from "./pages/walletservices";
+import ThankYou from "./pages/thankyouSign";
+import Services from "./pages/walletPage";
 
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.min.js";
@@ -33,13 +39,20 @@ function App() {
             <Route path="/pages/profile" element={<Profile />} />
             <Route path="/pages/services" element={<Services />} />
             <Route path="/pages/wallet" element={<Wallet />} />
-            <Route path="/forum" element={<Forum />} />
+            <Route path="/pages/login" element={<Login />} />
+            <Route path="/pages/forum" element={<Forum />} />
             <Route path="/pages/lobby" element={<Lobby />} />
             <Route path="/pages/ContestServices" element={<ContestServices />} />
+            <Route path="/pages/signup" element={<Signup />} />
+            <Route path="/pages/thankyouSign" element={<ThankYou />} />
+            <Route path="/pages/Deposit" element={<Deposit />} />
+            <Route path="/pages/Withdraw" element={<Withdraw/>}/>
+            <Route path="/pages/Promotions" element={<Promotions/>}/>
+            
           </Routes>
         </div>
 
-        <Footer />
+        <Footer/>
       </div>
     </BrowserRouter>
   );
