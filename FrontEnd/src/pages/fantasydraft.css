@@ -1,34 +1,32 @@
 .fantasy-body {
     display: flex;
-    flex-wrap: wrap; /* Allow items to wrap to the next line */
+    flex-wrap: wrap; 
     justify-content: space-between;
     padding: 20px;
-    align-items: center;
     background-color: rgba(185, 196, 203, 0.4);
     line-height: 1;
 }
+
+.scrollable-players {
+    max-height: 600px; /* Adjust the height to your preference */
+    overflow: auto;
+  }
 
 .left-side{
     width: 100%;
     text-align: left;
 }
 
-.between-components{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
-    text-align: center;
-}
-.between-components h1{
-    font-size: 30px;
-    font-weight: 300;
-}
-
 .right-side{
     width: 100%;
+    text-align: left;
+    display: block;
+    flex-direction: column;
 }
+
+/* .fantasy-body{
+    width: 100%;
+} */
 
 @media (min-width: 768px) {
     .left-side {
@@ -43,7 +41,15 @@
 
 .lineup-txt{
     text-align: left;
-    margin-left: 700px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.line-up{
+    display: block;
+    flex-direction: column;
 }
 
 .remaining-salary h1, .player-avg h1 {
@@ -56,6 +62,11 @@
 
 .salary-txt{
     display: flex;
+    text-align: right;
+}
+
+.remaining-salary .player-avg{
+    padding: 50px;
 }
 
 .bottom{

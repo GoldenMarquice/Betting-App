@@ -6,6 +6,7 @@
 .Contest-Nav{
     padding-bottom:20px;
     padding-right: 20px;
+    flex-wrap: wrap;
 }
 
 .Contest-Nav .nav-underline{
@@ -141,6 +142,10 @@
 }
 
 @media (max-width: 768px){
+    .Contest{
+        display: block;
+        flex-direction: column;
+    }
     .contest-body{
         display: block;
         flex-direction: column;
@@ -148,15 +153,27 @@
         margin: 0;
         justify-content: center;
     }
-    .btn-group{
+
+    .league-buttons{
         display: block;
         flex-direction: column;
-        width: 30%;
+        flex-wrap: wrap;
+        width: 100%;
         justify-content: center;
         margin-right: 0;
     }
-    .Contest-Nav{
-        width: 50%;
+    .Contest-Nav .nav-underline {
+        width: 72%;
         display: block;
+        flex-direction: column;
+        flex-wrap: wrap;
+        background-color: #fff;
+    }
+
+    .nav-item{
+        width: 70%;
+        font-size: small;
+        background-color: #fff;
+        display: inline-flex;
     }
 }

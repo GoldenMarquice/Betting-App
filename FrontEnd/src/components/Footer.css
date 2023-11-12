@@ -37,14 +37,11 @@
     cursor: pointer;
 }
 
-.footer .sub-footer {
-}
 
 .footer .sdgku {
     border-top: #acacac solid 1px;
     background-color: #0a58ca;
     width: 100%;
-    min-height: 100vh;
     border-top: #acacac solid 1px;
     background-color: #FFFFFF;
     border-bottom: 5px solid #BB2626;
