@@ -1,4 +1,7 @@
 import React, { useState } from 'react';
+import LoginService from '../services/loginService';
+
+
 import "./Login.css";
 
 function Login() {
@@ -6,9 +9,21 @@ function Login() {
     const [password, setPassword] = useState('');
     const [loggedIn, setLoggedIn] = useState(false);
 
-    const handleLogin = () => {
+
+    const handleLogin = async () => {
         if (username && password) {
-            setLoggedIn(true);
+            const service = new LoginService();
+            try{
+                const response = await service.login(username, password);
+                console.log("Logged In", response.token)
+
+                localStorage.setItem('token', response.token);
+                const myInfo = await service.myInfo();
+                console.log(myInfo)
+            }
+            catch{
+                console.log("Invalid Credentials")
+            }
         }
     };
 
@@ -21,11 +36,10 @@ function Login() {
     return (
         <div className="login card">
             <div className="login card-body">
-                {loggedIn ? (
-                    <div>
-                        <h2>Welcome, {username}!</h2>
-                        <button onClick={handleLogout}>Log Out</button>
-                    </div>
+                {loggedIn ? (<div>
+                    <h2>Welcome, {username}!</h2>
+                    <button onClick={handleLogout}>Log Out</button>
+                </div>
                 ) : (
                     <div>
                         <h2>Login</h2>
@@ -34,16 +48,14 @@ function Login() {
                                 type="text"
                                 placeholder="Username"
                                 value={username}
-                                onChange={(e) => setUsername(e.target.value)}
-                            />
+                                onChange={(e) => setUsername(e.target.value)} />
                         </div>
                         <div>
                             <input
                                 type="password"
                                 placeholder="Password"
                                 value={password}
-                                onChange={(e) => setPassword(e.target.value)}
-                            />
+                                onChange={(e) => setPassword(e.target.value)} />
                         </div>
                         <div>
                             <button onClick={handleLogin}>Login</button>
@@ -57,6 +69,11 @@ function Login() {
             </div>
         </div>
     );
-}
+};
+
+// use effect
+// async function 
+// LoadData 
+
 
 export default Login;
