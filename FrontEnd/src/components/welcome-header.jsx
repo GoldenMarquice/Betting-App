@@ -2,9 +2,8 @@ import React from "react";
 import "./welcome-header.css";
 
 function WelcomeHeader() {
+    
   return (
-
-
 
     <div className="Welcome-header">
         <div className="welcome-header-left">

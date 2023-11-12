@@ -12,6 +12,7 @@ class Player(models.Model):
    last_name = models.CharField(max_length=250)
    team = models.ForeignKey(Team, related_name="players", on_delete=models.CASCADE)
    position = models.CharField(max_length=150)
+   image = models.CharField(max_length=500, null=True, blank=True)
 
 # class Contest(models.Model):
 #    team = 

@@ -5,7 +5,16 @@ import './navbar.css';
 function MainNav() {
     return (
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
-            <Link class="navbar-brand" to="/">Logo</Link>
+<Link to="/pages/home" style={{ display: "inline-block", textDecoration: "none" }}>
+  <img
+    src="/QB-logo.png"
+    alt="Logo"
+    style={{
+      width: "150px",
+      height: "auto", 
+    }}
+  />
+</Link>
                 <button class="navbar-toggler"
                     type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
@@ -19,7 +28,7 @@ function MainNav() {
                         <Link class="nav-link" to="/pages/contest">Contest</Link>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Forum</a>
+                        <Link class="nav-link" to="/pages/forum">Forum</Link>
                     </li>
                     <li class="nav-item">
                         <Link class="nav-link" to="/pages/profile">Profile</Link>

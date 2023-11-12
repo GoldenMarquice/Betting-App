@@ -65,7 +65,6 @@ function PlayersPanel(){
                             <p id='name'>Name</p>
                             <div className="pick-bar-right">
                             <p id='game'>Game</p>
-                            <p id='fppg'>FPPG</p>
                             <p id='played'>Played</p>
                             <p id='oprank'>Op Rank</p>
                             <p id='player-salary'>Salary</p>

@@ -4,6 +4,8 @@
     flex-direction: column;
 }
 
+
+
 .why-section h1{
     text-align: center;
 }
@@ -22,6 +24,7 @@
     flex-direction: row;
     padding: 10px;
     margin-top: 50px;
+    justify-content: center;
 }
 .card-section2{
     width: 100%;
@@ -29,17 +32,22 @@
     flex-direction: row;
     padding: 10px;
     margin-bottom: 50px;
+    justify-content: center;
 }
 
 .card{
     margin: 10px;
 }
 
+
 .reasons{
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     margin: 3%;
     padding: 10px;
+    justify-content: center;
+    align-items: center;
 }
 
 .sports-betting, .casino-games, .fantasy-sports, .horse-betting, .watch-play, .stay-informed{
@@ -63,15 +71,17 @@
     }
  }
 
- @media (max-width: 425px) { 
-    .reasons{
-        width: 100%;
+ @media (max-width: 625px) { 
+    .why-section .reasons{
         display: block;
         flex-direction: column;
+        width: 100%;
     }
-    .sports-betting, .casino-games, .fantasy-sports, .horse-betting, .watch-play, .stay-informed{
+    .reasons, .sports-betting, .casino-games, .fantasy-sports, .horse-betting, .watch-play, .stay-informed{
         text-align: center;
         align-items: center;
         width: 100%;
+        display: block;
+        flex-direction: column;
     }
  }
