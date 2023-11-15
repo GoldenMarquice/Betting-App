@@ -16,6 +16,7 @@ import ThankYou from "./pages/thankyouSign";
 
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.min.js";
+import Logout from "./components/logout";
 import Blog from "./pages/blog";
 import Lobby from "./pages/lobby";
 
@@ -40,9 +41,10 @@ function App() {
             {/* <Route path="/pages/services" element={<Services />} /> */}
             <Route path="/pages/wallet" element={<Wallet />} />
             <Route path="/pages/login" element={<Login />} />
-            <Route path="/pages/forum" element={<Forum />} />
+            <Route path="/pages/logout" element={<Logout />} />
+            {/* <Route path="/pages/forum" element={<Forum />} /> */}
             <Route path="/pages/lobby" element={<Lobby />} />
-            <Route path="/pages/ContestServices" element={<ContestServices />} />
+            {/* <Route path="/pages/ContestServices" element={<ContestServices />} /> */}
             <Route path="/pages/signup" element={<Signup />} />
             <Route path="/pages/thankyouSign" element={<ThankYou />} />
             <Route path="/pages/Deposit" element={<Deposit />} />
@@ -57,8 +59,9 @@ function App() {
           </Routes>
         </div>
 
-        <Footer/>
+       
       </div>
+      <Footer/>
     </BrowserRouter>
   );
 }

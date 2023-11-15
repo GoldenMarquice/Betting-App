@@ -224,3 +224,39 @@
         padding: 10px;
     }
 }
+
+.transaction {
+    margin-top: 20px;
+}
+
+.transaction h2 {
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.transaction ul {
+    list-style: none;
+    padding: 0;
+}
+
+.transaction li {
+    font-size: 16px;
+    margin: 5px 0;
+    background-color: #f0f0f0;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 8px;
+    overflow: hidden;
+}
+
+.transaction-type {
+    font-weight: bold;
+}
+
+.transaction-amount {
+    color: green;
+}
+
+.transaction-date {
+    color: gray;
+}

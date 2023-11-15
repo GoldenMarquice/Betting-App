@@ -1,11 +1,20 @@
 import { PayPalButtons, PayPalScriptProvider } from '@paypal/react-paypal-js';
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
+import WalletService from '../services/walletService';
 import "./Deposit.css";
 
 function Withdraw() {
     const [selectedAmount, setSelectedAmount] = useState(null);
-    const [selectedPaymentType, setSelectedPaymentType] = useState(''); // Initialize with an empty string
+    const [selectedPaymentType, setSelectedPaymentType] = useState('');
     const [paymentStatus, setPaymentStatus] = useState(null);
+    const [balance, setBalance] = useState(0);
+    const [walletId, setWalletId] = useState(0);
+    const [transactions, setTransactions] = useState([]);
+    const [loading, setLoading] = useState(true);
+    const [showAll, setShowAll] = useState(false);
+
+    const transactionsToShow = showAll ? transactions : transactions.slice(0, 5);
 
     const withdrawOptions = [
         { amount: 50, label: '$50' },
@@ -17,8 +26,7 @@ function Withdraw() {
 
     const createPayPalOrder = async (amount) => {
         try {
-            // Make an API request to your server to create a PayPal order
-            const response = await fetch('YOUR_SERVER_ENDPOINT_TO_CREATE_ORDER', {
+            const response = await fetch('https://127.0.0.1:8000/api/wallet', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -39,9 +47,28 @@ function Withdraw() {
         }
     };
 
-    const handlePaymentSubmit = () => {
-        // Add the logic to handle payment submission here
-        // You can use the selectedAmount and selectedPaymentType to process the payment
+    const handlePaymentSubmit = async () => {
+        try {
+
+            // create the transaction object
+            // send it to service
+            let transaction = {
+                wallet: walletId,
+                type: 'Withdrawal',
+                payment_method: 'Paypal',
+                amount: parseFloat(selectedAmount),
+                date: new Date(),
+                element_id: 1
+            }
+            let service = new WalletService();
+            await service.saveTransaction(transaction);
+
+            // update your balance
+            fetchWallet();
+
+        } catch (error) {
+            console.error('Error submitting payment:', error);
+        }
     };
 
     function handlePaymentTypeChange(event) {
@@ -51,10 +78,9 @@ function Withdraw() {
 
     const handlePayPalPayment = async () => {
         try {
-            // Create an order using the createPayPalOrder function
+
             const orderID = await createPayPalOrder(selectedAmount);
 
-            // Use the PayPal API to execute the payment and capture the funds
             const actions = window.paypal.getActions();
 
             const details = {
@@ -62,16 +88,14 @@ function Withdraw() {
                     {
                         amount: {
                             currency_code: 'USD',
-                            value: selectedAmount.toFixed(2), // Format the amount
+                            value: selectedAmount.toFixed(2),
                         },
                     },
                 ],
             };
 
-            // Execute the payment
             const result = await actions.order.capture();
 
-            // Handle the payment success
             if (result.status === 'COMPLETED') {
                 setPaymentStatus('Payment successful');
             } else {
@@ -87,6 +111,60 @@ function Withdraw() {
 
     const clientId = paypalId;
 
+    const updateBalance = async (amount) => {
+        try {
+            const response = await fetch('https://127.0.0.1:8000/api/wallet', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ amount }),
+            });
+
+            const data = await response.json();
+
+            console.log('Server response:', data);
+
+            if (response.ok) {
+                setBalance(data.newBalance);
+                console.log('Balance updated successfully');
+            } else {
+                console.error('Failed to update balance:', data.error);
+            }
+        } catch (error) {
+            console.error('Error updating balance:', error);
+        }
+    };
+
+    const fetchWallet = async () => {
+        let service = new WalletService();
+        let response = await service.getWallet();
+        console.log("my wallet", response);
+        setBalance(response?.balance || 0);
+        setWalletId(response?.id || 0);
+    }
+
+    useEffect(() => {
+        fetchWallet();
+        // fetchTransactions
+    }, []);
+
+    const fetchTransactions = async () => {
+        try {
+            let service = new WalletService();
+            let transactionsData = await service.getTransactions();
+            console.log("Transactions", transactionsData);
+            setTransactions(transactionsData);
+        } catch (error) {
+            console.error('Error fetching transactions:', error);
+        }
+    }
+
+    useEffect(() => {
+        fetchTransactions();
+    }, []);
+
+
     return (
         <div className="deposit">
             <main>
@@ -97,7 +175,7 @@ function Withdraw() {
                     <h2 id="deposit-select-amount">Select Amount (USD)</h2>
                     <section className="deposit-amount-container" id="deposit-options-container">
                         <fieldset className="deposit-options-group">
-                            <legend className="deposit-amount-legend">Payment Amount</legend>
+                            <legend className="deposit-amount-legend">Withdrawal Amount</legend>
                             <div className="deposit-amount-options-inner">
                                 {withdrawOptions.map((option, index) => (
                                     <div
@@ -180,6 +258,55 @@ function Withdraw() {
                         }}
                     />
                 </PayPalScriptProvider>
+                <section className="deposit-product-info">
+                    <div className="deposit-wallet-switcher" id="deposit-switch-product">
+                        <div><label htmlFor=""> How much would you like to Withdraw:</label></div>
+                        <div><input type="value" placeholder='Withdraw amount' value={selectedAmount}
+                            onChange={(e) => setSelectedAmount(e.target.value)} /> </div>
+                        <br />
+                        <Link to="/pages/withdraw" onClick={handlePaymentSubmit} className="submit-payment-button">Submit Payment</Link>
+                        <p className="deposit-responsible-gaming" id="deposit-link-responsible-gaming">
+                            Your current balance: ${balance.toFixed(2)}
+                        </p>
+
+                        {/* <div>
+                            <button className="submit-payment-button" onClick={handlePayPalPayment}>Pay with PayPal</button>
+                            {paymentStatus && <div>Payment Status: {paymentStatus}</div>}
+                        </div>
+                    </div>
+                    <div className="deposit-minimum-amount">
+                        <p>
+                            <strong>Minimum Deposit:</strong> $50.00
+                        </p>
+                    </div>
+                    
+                    <p className="deposit-responsible-gaming" id="deposit-link-responsible-gaming"></p>
+                  */}
+                    </div>
+                    <div className='transaction'>
+                        <h2 className='transaction h2'>Recent Transactions</h2>
+                        {transactions.length > 0 ? (
+                            <>
+                                <ul className='transaction ul'>
+                                    {transactionsToShow.map((transaction) => (
+                                        <li className='transaction li' key={transaction.id}>
+                                            {transaction.type}: ${transaction.amount.toFixed(2)} - {new Date(transaction.date).toLocaleDateString()}
+                                        </li>
+                                    ))}
+                                </ul>
+                                {!showAll && transactions.length > 5 && (
+                                    <button onClick={() => setShowAll(true)}>Show More</button>
+                                )}
+                                {showAll && (
+                                    <button onClick={() => setShowAll(false)}>Show Less</button>
+                                )}
+                            </>
+                        ) : (
+                            <p>No transactions found.</p>
+                        )}
+                    </div>
+
+                </section>
 
                 {/* <section className="deposit-product-info">
                     <div className="deposit-wallet-switcher" id="deposit-switch-product">
@@ -195,8 +322,8 @@ function Withdraw() {
                     </div>
                     <p className="deposit-responsible-gaming" id="deposit-link-responsible-gaming"></p>
                     <button onClick={handlePaymentSubmit} className="submit-payment-button">Submit Withdrawal</button> */}
-            {/* </section> */}
-        </main>
+                {/* </section> */}
+            </main>
         </div >
     );
 }

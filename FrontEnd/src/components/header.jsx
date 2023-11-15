@@ -1,4 +1,5 @@
 import React from 'react';
+import Logout1 from './Logout1';
 import './header.css';
 
 function Header() {
@@ -8,6 +9,7 @@ function Header() {
   <a class="nav-link" href="#">Sportsbook</a>
   <a class="nav-link" href="#">Casino</a>
   <a class="nav-link" href="/forum">Forum</a>
+  <a class="nav-link" href='/pages/login'> <Logout1/> </a>
 </nav>
 
     );
