@@ -1,11 +1,11 @@
 import Login from "../components/Login";
 import "./home.css";
+import { Link } from 'react-router-dom';
 
 
 function Home() {
     return (
         <div className="home">
-            <Login/>
             <div id="carouselExampleSlidesOnly" className="carousel-slide"  data-bs-ride="carousel">
                 <div className="carousel-inner">
                     <div className="carousel-item active">
@@ -14,9 +14,6 @@ function Home() {
                     <div className="carousel-item">
                         <img src="https://via.placeholder.com/800x400" className="d-block w-100" alt="Image 2"/>
                     </div>
-                    <div className="carousel-item">
-                        <img src="https://via.placeholder.com/800x400" className="d-block w-100" alt="Image 3"/>
-                    </div>
                 </div>
             </div>
                 <h1>Explore the world of QuickBets sports and gaming</h1>
@@ -24,10 +21,14 @@ function Home() {
 
                 <section className="card-section">
                     <div className="card">
+                        <Link to="/pages/lobby">
                         <img src="/fantasy-home.jpg"  alt="placeholder"></img>
+                        </Link>
                     </div>
                     <div className="card">
+                    <Link to="/pages/contest">
                         <img src="/contestHome.jpg"  alt="placeholder"></img>
+                        </Link>
                     </div>
                 </section>
                 <section className="card-section2">

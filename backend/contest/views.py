@@ -6,6 +6,7 @@ from .serializers import TeamSerializer, PlayerSerializer, ContestSerializer
 from .models import Team, Player, Contest
 import requests
 from .data import lions
+from .data import raiders
 
 # Create your views here.
 
@@ -22,7 +23,9 @@ class PlayerViewSet(viewsets.ModelViewSet):
 
         # do the magic here    
         url = "https://americanfootballapi.p.rapidapi.com/api/american-football/team/7/players"
-        #url = " https://v1.american-football.api-sports.io/players?season=2023&team=7"
+        url = "https://americanfootballapi.p.rapidapi.com/api/american-football/team/1/players"
+        url = " https://v1.american-football.api-sports.io/players?season=2023&team=7"
+        url = " https://v1.american-football.api-sports.io/players?season=2023&team=1"
         headers = {
             "X-RapidAPI-Key": "d801ecf5e5msh280f43335d3a18bp19ae85jsn8e922578fd4a",
             "X-RapidAPI-Host": "americanfootballapi.p.rapidapi.com"
@@ -33,6 +36,7 @@ class PlayerViewSet(viewsets.ModelViewSet):
        # print(response.json())
 
         players = lions["response"]
+        players += raiders["response"]
 
         # migrations
         # for on players,

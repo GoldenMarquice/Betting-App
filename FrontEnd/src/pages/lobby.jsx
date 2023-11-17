@@ -36,21 +36,21 @@ function Lobby() {
             <div class="carousel-inner">
               <div class="carousel-item active">
                 <img
-                  src="https://via.placeholder.com/800x400"
+                  src="/contest-banner.jpg"
                   class="d-block w-100"
                   alt="..."
                 ></img>
               </div>
               <div class="carousel-item">
                 <img
-                  src="https://via.placeholder.com/800x400"
+                  src="/6k-monsterball.jpg"
                   class="d-block w-100"
                   alt="..."
                 ></img>
               </div>
               <div class="carousel-item">
                 <img
-                  src="https://via.placeholder.com/800x400"
+                  src="/4k-mlb.jpg"
                   class="d-block w-100"
                   alt="..."
                 ></img>

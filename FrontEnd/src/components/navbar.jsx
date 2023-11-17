@@ -22,23 +22,23 @@ function MainNav() {
     }, []);
 
     return (
-        <nav class="navbar navbar-expand-lg bg-body-tertiary">
-            <Link to="/pages/home" style={{ display: "inline-block", textDecoration: "none" }}>
-                <img
-                    src="/QB-logo.png"
-                    alt="Logo"
-                    style={{
-                        width: "150px",
-                        height: "auto",
-                    }}
-                />
-            </Link>
-            <button class="navbar-toggler"
-                type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav">
+    <nav class="navbar navbar-expand-lg bg-body-">
+<Link to="/pages/home" style={{ display: "inline-block", textDecoration: "none" }}>
+  <img
+    src="/QBlogo-white.svg"
+    alt="Logo"
+    style={{
+      width: "140px",
+      height: "auto", 
+    }}
+  />
+</Link>
+                <button class="navbar-toggler"
+                    type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" style={{color: "#fff"}} id="navbarNav">
+                    <ul class="navbar-nav">
                     <li class="nav-item">
                         <Link class="nav-link" aria-current="page" to="/pages/lobby">Lobby</Link>
                     </li>
@@ -61,10 +61,10 @@ function MainNav() {
                         <a href="/pages/login" class="nav-link">Login</a>
                     </li>
                     <li class="nav-item">
-                        <a href="/pages/Signup" class="nav-link">Sign Up</a></li>
-                </ul>
-            </div>
-
+                        <a href="/pages/Signup" class="nav-link">SignUp</a></li>
+                    </ul>
+                </div>
+        
 
             <div className="container-fluid2">
                 <div className='nav-text'>
