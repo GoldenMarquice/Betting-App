@@ -1,5 +1,6 @@
 .contest-card-container{
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     min-height: 85px;
     gap: 20px;
@@ -284,7 +285,7 @@ button{
 @media (max-width:425px){
     .contest-card-container{
         width: 100%;
-        display: inline-block;
+        display: block;
         flex-direction: column;
         padding: 20px;
         justify-content: space-around;

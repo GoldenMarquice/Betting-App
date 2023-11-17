@@ -1,6 +1,20 @@
+
+
 .navbar{
     width: 100%;
-    margin-left:20px
+    background-color: darkblue;
+    color: #fff;
+}
+
+
+.navbar img{
+    padding-left: 20px;
+}
+
+
+
+span.navbar-toggler-icon{
+    color: #fff;
 }
 
 
