@@ -2,36 +2,36 @@ import "./App.css";
 import Footer from "./components/Footer";
 import Login from "./components/Login";
 import Header from "./components/header";
+import Logout from "./components/logout";
 import MainNav from "./components/navbar";
 import Wallet from "./components/wallet";
-import WelcomeHeader from "./components/welcome-header";
 import Deposit from "./pages/Deposit";
 import Promotions from "./pages/Promotions";
 import Signup from "./pages/Signup";
 import Withdraw from "./pages/Withdraw";
 import About from "./pages/about";
-import Home from "./pages/home";
-import Profile from "./pages/profile";
-import ThankYou from "./pages/thankyouSign";
-
-import "bootstrap/dist/css/bootstrap.min.css";
-import "bootstrap/dist/js/bootstrap.min.js";
-import Logout from "./components/logout";
 import Blog from "./pages/blog";
-import Lobby from "./pages/lobby";
-
-import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Contest from "./pages/contest";
 import FantasyDraft from "./pages/fantasydraft";
 import ForumPage from "./pages/forum-page";
+import Home from "./pages/home";
+import Lobby from "./pages/lobby";
+import Profile from "./pages/profile";
+import ThankYou from "./pages/thankyouSign";
+
+
+import "bootstrap/dist/css/bootstrap.min.css";
+import "bootstrap/dist/js/bootstrap.min.js";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+
 
 function App() {
   return (
     <BrowserRouter>
       <Header />
       <MainNav />
-      <WelcomeHeader />
-
+      
+      
       <div className="container-fluid">
         <div className="App">
           <Routes>
@@ -58,8 +58,6 @@ function App() {
             <Route exact path="/pages/fantasydraft" element={<FantasyDraft />} />
           </Routes>
         </div>
-
-       
       </div>
       <Footer/>
     </BrowserRouter>

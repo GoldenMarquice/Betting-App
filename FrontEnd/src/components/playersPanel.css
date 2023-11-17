@@ -6,7 +6,9 @@
     align-items: center;
     border-bottom: 1px solid gray;
     margin-top: 3px;
-  }
+    flex-wrap: wrap;
+    padding: 10px;
+}
 
 ul{
     border-bottom: black;
@@ -48,6 +50,7 @@ ul{
 .flex-options{
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     line-height: .5;
     align-items: center;
     width: 100%;
@@ -79,7 +82,7 @@ ul{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    width: 100%;
+    width: 90%;
     align-items: center;
     padding: 10px 0;
     font-size: 12px;
@@ -90,6 +93,7 @@ ul{
     display: flex;
     justify-content: space-between;
     width: 40%;
+    padding-right: 70px;
 }
 
 

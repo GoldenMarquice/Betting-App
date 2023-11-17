@@ -66,9 +66,8 @@ function WelcomeHeader() {
 
     function updateBackendBalance(newBalance) {
     }
+    
   return (
-
-
 
     <div className="Welcome-header">
         <div className="welcome-header-left">

@@ -10,7 +10,7 @@ class BlogService {
 
     async getContestServices() {
             // get data from API
-            const response = await axios.get("http://127.0.0.1:8000/api/team");
+            const response = await axios.get("http://127.0.0.1:8000/api/team/");
             return response.data;
 
 
@@ -35,6 +35,11 @@ class BlogService {
         //         image: 'http://',
         //     },
         // ];
+    }
+
+    async getPlayers() {
+        const response = await axios.get("http://127.0.0.1:8000/api/player/loadData/");
+        return response.data; 
     }
 
     async saveBlogPost(post) {

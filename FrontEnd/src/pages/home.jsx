@@ -1,14 +1,15 @@
 import Login from "../components/Login";
 import "./home.css";
-import FantasyFootballCard from "../components/fantasyfootballcard";
+
 
 function Home() {
     return (
         <div className="home">
+            <Login/>
             <div id="carouselExampleSlidesOnly" className="carousel-slide"  data-bs-ride="carousel">
                 <div className="carousel-inner">
                     <div className="carousel-item active">
-                        <img src="https://via.placeholder.com/800x400" className="d-block w-100" alt="Image 1"/>
+                        <img src="/1200x628.jpg" className="d-block w-100" alt="Image 1"/>
                     </div>
                     <div className="carousel-item">
                         <img src="https://via.placeholder.com/800x400" className="d-block w-100" alt="Image 2"/>
@@ -18,31 +19,30 @@ function Home() {
                     </div>
                 </div>
             </div>
-            <Login/>
-                <h1>Explore the world of FanDuel sports and gaming</h1>
+                <h1>Explore the world of QuickBets sports and gaming</h1>
                 <p>The best place to bet on sports, play online games, and build your team.</p>
 
                 <section className="card-section">
                     <div className="card">
-                        <img src="https://via.placeholder.com/800x400"  alt="placeholder"></img>
+                        <img src="/fantasy-home.jpg"  alt="placeholder"></img>
                     </div>
                     <div className="card">
-                        <img src="https://via.placeholder.com/800x400"  alt="placeholder"></img>
+                        <img src="/contestHome.jpg"  alt="placeholder"></img>
                     </div>
                 </section>
                 <section className="card-section2">
                     <div className="card">
-                        <img src="https://via.placeholder.com/800x400" alt="placeholder"></img>
+                        <img src="/sportsbookHome.jpg" alt="placeholder"></img>
                     </div>
                     <div className="card">
-                        <img src="https://via.placeholder.com/800x400" alt="placeholder"></img>
+                        <img src="/casinoHome.jpg" alt="placeholder"></img>
                     </div>
                     <div className="card">
-                        <img src="https://via.placeholder.com/800x400" alt="placeholder"></img>
+                        <img src="/socialHome.jpg" alt="placeholder"></img>
                     </div>
                 </section>
                 <section className="why-section">
-                    <h1>Why FanDuel?</h1>
+                    <h1>Why QuickBets?</h1>
                     <p>FanDuel makes every moment more. You're not just watching the game, you're a part of the action! Here's what you can do with FanDuel:</p>
 
                         <div className="reasons">
@@ -73,7 +73,6 @@ function Home() {
                             <p>FanDuel isn't just about playing; it's about learning too. With FanDuel Research, you can read up on the latest NFL news, NBA news, MLB news, NHL news, and even College Football news. It's also easy to catch up on all the odds, whether it's NFL Odds, NBA Odds, or College Football Odds.</p>
                         </div>
                     </div>
-                    <FantasyFootballCard />
                 </section>
 
             </div>
