@@ -1,17 +1,31 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import "./Signup.css";
 
 function Signup() {
+    const Navigate = useNavigate();
+
     const [username, setUsername] = useState('');
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [firstName, setFirstname] = useState('');
     const [lastName, setLastName] = useState('');
     const [DateOfBirth, setDateOfBirth] = useState('');
-    
+    const handleSignup = (e) => {
+        const birthDate = new Date(DateOfBirth);
+        const currentDate = new Date();
+        const age = currentDate.getFullYear() - birthDate.getFullYear();
 
-    const handleSignup = () => {
+        if (age < 18) {
+            console.log("You must be at least 18 years old to sign up.");
+            alert("You must be at least 18 years old to sign up.");
+            e.preventDefault();
+            return;
+
+        }
         console.log("Signup logic goes here");
+
+        Navigate('/pages/thankyouSign');
     };
 
     return (
@@ -35,6 +49,7 @@ function Signup() {
                         onChange={(e) => setLastName(e.target.value)}
                     />
                 </div>
+            <label htmlFor="">Must be at least 18</label> 
                 <div className="signup input">
                     <input
                         type="date"

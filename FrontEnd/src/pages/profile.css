@@ -1,4 +1,32 @@
+.profile .row {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.profile .card {
+    flex: 0 0 calc(50% - 30px);
+    margin: 15px;
+    height: 300px;
+    max-width: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.profile .card img {
+    width: 100%;
+    height: auto;
+}
+
+.profile .card-title,
+.profile .submit-payment-button {
+    margin: 10px 0;
+    text-align: center;
+}
+
 .profile .card-container {
+
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
@@ -7,12 +35,36 @@
 .profile .card {
     flex: 0 0 calc(33.33% - 20px);
     margin: 15px;
-    height: 300px;
-    max-width: auto;
+    height: auto;
+    max-width: none;
     max-height: auto;
 }
 
 .profile input{
     justify-content: center;
     max-width: 150px;
+}
+
+
+.profile .card-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+
+.profile .card img {
+    width: 100%;
+    height: auto;
+}
+
+.profile input {
+    justify-content: center;
+    max-width: 150px;
+}
+
+.profile .card-title,
+.profile .card-text,
+.profile .submit-payment-button {
+    margin-bottom: 10px;
 }

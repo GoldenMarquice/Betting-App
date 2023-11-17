@@ -1,12 +1,19 @@
 from rest_framework import serializers
 
-from .models import ActiveBets, CurrentGames, HistoricalData, Wallet
+from .models import (ActiveBets, CurrentGames, HistoricalData, Transaction,
+                     Wallet)
 
 
 class WalletSerializer(serializers.ModelSerializer):
     class Meta:
         model = Wallet
         fields = "__all__" #double_
+
+class TransactionSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Transaction
+        fields = "__all__" #double_
+
 
 class ActiveBetsSerializer(serializers.ModelSerializer):
     class Meta:

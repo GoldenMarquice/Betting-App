@@ -1,7 +1,71 @@
-import React from "react";
+import React, { useEffect, useState } from 'react';
+import WalletService from '../services/walletService';
 import "./welcome-header.css";
 
 function WelcomeHeader() {
+    const [balance, setBalance] = useState(0);
+    const [transactionAmount, setTransactionAmount] = useState(0);
+    const [transactions, setTransactions] = useState([]);
+    const [showAll, setShowAll] = useState(false);
+
+    const transactionsToShow = showAll ? transactions : transactions.slice(0, 5);
+
+    useEffect(() => {
+        fetchWalletData(); // Fetch wallet data when the component mounts
+    }, []);
+
+    const fetchWalletData = async () => {
+        const walletService = new WalletService();
+        try {
+            const walletData = await walletService.getWallet();
+            setBalance(walletData.balance);
+            let transactionsData = await walletService.getTransactions()
+            setTransactions(transactionsData);
+            // setTransactions(walletData.transactions);
+        } catch (error) {
+            console.error('Error fetching wallet data:', error);
+        }
+    }
+
+    const handleDeposit = () => {
+        if (transactionAmount > 0) {
+            setBalance(balance + transactionAmount);
+            addTransaction(`Deposited $${transactionAmount}`);
+            updateBackendBalance(balance + transactionAmount);
+        }
+    };
+
+    const handleWithdraw = () => {
+        if (transactionAmount > 0 && transactionAmount <= balance) {
+            setBalance(balance - transactionAmount);
+            addTransaction(`Withdrawn $${transactionAmount}`);
+            updateBackendBalance(balance - transactionAmount);
+        }
+    };
+
+    const addTransaction = (description) => {
+        const newTransaction = {
+            description,
+            amount: transactionAmount,
+            timestamp: new Date().toLocaleString(),
+        };
+        setTransactions([...transactions, newTransaction]);
+        setTransactionAmount(0);
+    };
+    /**
+     * 
+     * 
+     * use effect calls a loadWallet
+     * loadWallet calls the walletService.js getMyWallet
+     * put data on an state variables
+     * render data from state
+     * 
+     * 
+     * 
+     */
+
+    function updateBackendBalance(newBalance) {
+    }
     
   return (
 
@@ -23,7 +87,7 @@ function WelcomeHeader() {
                     data-test-id="data-chunk-value"
                     theme="[object Object]"
                 >
-                    Welcome user
+                    {/* Welcome user ${user.username} */}
                 </span>
                 <span
                     className="earn-rewards"
@@ -77,7 +141,7 @@ function WelcomeHeader() {
                         data-test-id="data-chunk-value"
                         theme="[object Object]"
                     >
-                        $0
+                        ${balance}
                     </span>{" "}
                     <br></br>
                     <span

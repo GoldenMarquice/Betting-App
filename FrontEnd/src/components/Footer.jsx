@@ -7,7 +7,7 @@ function Footer() {
             <div className="container">
                 <div className="row">
                     <div className="col-6 col-md-2 mb-3">
-                        <h5>Name</h5>
+                        <h5>QuickBets</h5>
                         <ul className="nav flex-column">
                             <li className="nav-item mb-2">
                                 <a href="/pages/home" className="nav-link p-0 text-muted">

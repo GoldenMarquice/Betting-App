@@ -47,6 +47,7 @@ class LoginService {
     let response = await axiosInstance.get(
       "/api/users/me",
     );
+    console.log(response.data)
     return response.data;
   }
 }

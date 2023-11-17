@@ -1,12 +1,16 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import WalletService from '../services/walletService';
+import "./wallet.css";
 
 
 function Wallet() {
     const [balance, setBalance] = useState(1000);
     const [transactionAmount, setTransactionAmount] = useState(0);
     const [transactions, setTransactions] = useState([]);
+    const [showAll, setShowAll] = useState(false);
+
+    const transactionsToShow = showAll ? transactions : transactions.slice(0, 5);
 
     useEffect(() => {
         fetchWalletData(); // Fetch wallet data when the component mounts
@@ -17,12 +21,14 @@ function Wallet() {
         try {
             const walletData = await walletService.getWallet();
             setBalance(walletData.balance);
-            setTransactions(walletData.transactions);
+            let transactionsData = await walletService.getTransactions()
+            setTransactions(transactionsData);
+            // setTransactions(walletData.transactions);
         } catch (error) {
             console.error('Error fetching wallet data:', error);
         }
     }
-    
+
     const handleDeposit = () => {
         if (transactionAmount > 0) {
             setBalance(balance + transactionAmount);
@@ -30,7 +36,7 @@ function Wallet() {
             updateBackendBalance(balance + transactionAmount);
         }
     };
-    
+
     const handleWithdraw = () => {
         if (transactionAmount > 0 && transactionAmount <= balance) {
             setBalance(balance - transactionAmount);
@@ -60,40 +66,53 @@ function Wallet() {
      * 
      */
 
-function updateBackendBalance(newBalance) {
-        // Your logic to update the backend balance here
+    function updateBackendBalance(newBalance) {
     }
 
     return (
         <div className='wallet'>
-        <div className="card">
-            <h2>Wallet</h2>
-            <p>Balance: ${balance}</p>
+            <div className="card">
+                <h2>Wallet</h2>
+                <p>Balance: ${balance}</p>
 
-            <div>
                 <div>
-            <Link to="/pages/Deposit" class="submit-payment-button"> Deposit </Link>
-                </div>
+                    <div>
+                        <Link to="/pages/Deposit" class="submit-payment-button"> Deposit </Link>
+                    </div>
                 </div>
                 <br />
-            <div>
                 <div>
-                <Link to="/pages/Withdraw" class="submit-payment-button"> Withdraw</Link>
+                    <div>
+                        <Link to="/pages/Withdraw" class="submit-payment-button"> Withdraw</Link>
+                    </div>
                 </div>
+                <br />
+
+                <h3>Transaction History</h3>
+                <div className='transaction'>
+                    <h2 className='transaction h2'>Recent Transactions</h2>
+                    {transactions.length > 0 ? (
+                        <>
+                            <ul className='transaction ul'>
+                                {transactionsToShow.map((transaction) => (
+                                    <li className='transaction li' key={transaction.id}>
+                                        {transaction.type}: ${transaction.amount.toFixed(2)} - {new Date(transaction.date).toLocaleDateString()}
+                                    </li>
+                                ))}
+                            </ul>
+                            {!showAll && transactions.length > 5 && (
+                                <button onClick={() => setShowAll(true)}>Show More</button>
+                            )}
+                            {showAll && (
+                                <button onClick={() => setShowAll(false)}>Show Less</button>
+                            )}
+                        </>
+                    ) : (
+                        <p>No transactions found.</p>
+                    )}
+                </div>
+
             </div>
-            <br />
-
-            <h3>Transaction History</h3>
-            <ul>
-
-                {/* wallet.transactions.map */}
-                {transactions.map((transaction, index) => (
-                    <li key={index}>
-                        {transaction.description} ({transaction.timestamp})
-                    </li>
-                ))}
-            </ul>
-        </div>
         </div>
     );
 }
