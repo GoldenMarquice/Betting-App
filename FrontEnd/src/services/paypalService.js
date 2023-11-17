@@ -1,10 +1,11 @@
-import axios from 'axios';
+
+import axiosInstance from './axiosService';
 
 class PaypalService {
     async createPayPalOrder(amount) {
         try {
             // Make an API request to your server to create an order
-            const response = await axios.post('YOUR_SERVER_ENDPOINT_TO_CREATE_ORDER', {
+            const response = await axiosInstance.post('http://127.0.0.1:8000/admin/wallet/transaction/', {
                 amount: amount,
             });
 

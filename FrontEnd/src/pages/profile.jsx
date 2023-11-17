@@ -5,7 +5,7 @@ import WalletService from "../services/walletService";
 import "./profile.css";
 
 function Profile() {
-    const [balance, setBalance] = useState(1000);
+    const [balance, setBalance] = useState(0);
     const [selectedPromotion, setSelectedPromotion] = useState(null);
     const [availablePromotions, setAvailablePromotions] = useState([]);
 
@@ -67,7 +67,7 @@ function Profile() {
                 <div className="row">
                     <div className="col-sm-6 col-md-4">
                         <div className="card">
-                            <img src="card-image.jpg" className="card-img-top" alt="Card" />
+                            <img src="/img/wallet.webp" className="card-img-top" alt="Card" />
                             <div className="card-body">
                                 <h5 className="card-title">Wallet</h5>
                                 <p className="card-text">Balance</p>
@@ -78,11 +78,12 @@ function Profile() {
 
                     <div className="col-sm-6 col-md-4">
                         <div className="card">
-                            <img src="card-image.jpg" className="card-img-top" alt="Card" />
+                            <img src="/img/ATM.webp" className="card-img-top" alt="Card" />
                             <div className="card-body">
                                 <h5 className="card-title">Add Funds</h5>
-                                <p className="card-text">Needed</p>
+                                <p className="card-text"></p>
                                 <div><a href="/pages/Deposit" className="submit-payment-button">Deposit</a></div>
+                                
                                 <br />
                                 <div><a href="/pages/withdraw" className="submit-payment-button">Withdraw</a></div>
                             </div>
@@ -91,7 +92,7 @@ function Profile() {
 
                     <div className="col-sm-6 col-md-4">
                         <div className="card">
-                            <img src="card-image.jpg" className="card-img-top" alt="Card" />
+                            <img src="/img/DisplayFunds.jpeg" className="card-img-top" alt="Card" />
                             <div className="card-body">
                                 <h5 className="card-title">Display Funds</h5>
                                 <p className="card-text">Funds ${balance}</p>
@@ -104,20 +105,17 @@ function Profile() {
                 <div className="row">
                     <div className="col-sm-6 col-md-4">
                         <div className="card">
-                            <img src="card-image.jpg" className="card-img-top" alt="Card" />
-                            <div className="card-body">
+                            <img src="/img/Promotions.jpg" className="card-img-top" alt="Card" />
                                 <h5 className="card-title">Promotion Code</h5>
-                                <input type="text" placeholder="Promotion Code" />
-                                <p className="card-text">This is the Promotion Entered</p>
+                                <br />
+                                {/* <input type="text" placeholder="Promotion Code" />
+                                <p className="card-text">This is the Promotion Entered</p> */}
                                 <Link to="/pages/Promotions" className="submit-payment-button">
-                                    Add
+                                    Add Promotion
                                 </Link>
                                 <br />
                                 <br />
-                                <a href="#" className="submit-payment-button">
-                                    Submit Code
-                                </a>
-                            </div>
+                            
                         </div>
                     </div>
 

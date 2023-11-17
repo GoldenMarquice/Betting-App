@@ -6,6 +6,7 @@ from . import views
 
 router = DefaultRouter()
 router.register('wallet', views.WalletViewSet)
+router.register('transactions', views.TransactionListView)
 
 urlpatterns = [
     path('', include(router.urls)),
