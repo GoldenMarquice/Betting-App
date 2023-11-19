@@ -14,7 +14,8 @@ import "./lineupHeader.css";
 
         function loadData() {
             const data = ContestService.getContestList();
-            setContest(data[0]); // todo: select the correct one
+            const contest = data.filter(x => x.id ==props.id)[0];
+            setContest(contest); // todo: select the correct one
         }
         
         useEffect(()=> {

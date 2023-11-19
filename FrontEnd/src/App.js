@@ -55,7 +55,7 @@ function App() {
             <Route path="/forum" element={<ForumPage />} />
             
             <Route exact path="/pages/contest" element={<Contest />} />
-            <Route exact path="/pages/fantasydraft" element={<FantasyDraft />} />
+            <Route exact path="/pages/fantasydraft/:id" element={<FantasyDraft />} />
           </Routes>
         </div>
       </div>

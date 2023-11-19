@@ -11,7 +11,7 @@ const FantasyFootballModal = (props) => {
 
   const showDraft = () => {
     setdraftVisible(true);
-    console.log("card clicked")
+    console.log("card clicked", props.data)
   }
 
     const close = () => {
@@ -199,7 +199,7 @@ const FantasyFootballModal = (props) => {
                             </div>
                             <div class="btn-container">
                                 <a href="#" class="sb-btn sb-btn-success" data-contest-template-id="272773" data-draftgroup-id="94474" data-h2h-action="draft">
-                                <Link to="/pages/fantasydraft"><button onClick={showDraft}><span>Draft Now</span></button></Link>
+                                <Link to={`/pages/fantasydraft/${props.data.id}`}><button onClick={showDraft}><span>Draft Now</span></button></Link>
                                 </a>
                             </div>
                         </div>

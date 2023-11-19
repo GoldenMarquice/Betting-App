@@ -32,13 +32,13 @@ function Contest() {
             <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
                 <div class="carousel-inner">
                     <div class="carousel-item active">
-                        <img src="https://via.placeholder.com/800x400" class="d-block w-100" alt="..."></img>
+                        <img src="/6k-monsterball.jpg" class="d-block w-100" alt="..."></img>
                     </div>
                     <div class="carousel-item">
-                        <img src="https://via.placeholder.com/800x400" class="d-block w-100" alt="..."></img>
+                        <img src="/4k-mlb.jpg" class="d-block w-100" alt="..."></img>
                     </div>
                     <div class="carousel-item">
-                        <img src="https://via.placeholder.com/800x400" class="d-block w-100" alt="..."></img>
+                        <img src="/contest-banner.jpg" class="d-block w-100" alt="..."></img>
                     </div>
                 </div>
                 <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
