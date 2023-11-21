@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./Footer.css";
 
 function Footer() {
@@ -7,52 +8,49 @@ function Footer() {
             <div className="container">
                 <div className="row">
                     <div className="col-6 col-md-2 mb-3">
-                        <h5>QuickBets</h5>
+                    <Link to="/pages/home" style={{ display: 'inline-block', textDecoration: 'none' }}>
+            <img src="/QBlogo-white.svg" alt="Logo" style={{ width: '140px', height: 'auto' }} />
+            </Link>
                         <ul className="nav flex-column">
                             <li className="nav-item mb-2">
-                                <a href="/pages/home" className="nav-link p-0 text-muted">
+                                <Link href="/pages/home" className="nav-link p-0 text-muted">
                                     Home
-                                </a>
+                                </Link>
                             </li>
                             <li className="nav-item mb-2">
-                                <a href="/pages/lobby" className="nav-link p-0 text-muted">
+                                <Link href="/pages/lobby" className="nav-link p-0 text-muted">
                                     Lobby
-                                </a>
+                                </Link>
                             </li>
                             <li className="nav-item mb-2">
-                                <a href="#" className="nav-link p-0 text-muted">
-                                    GamePage/Contest
-                                </a>
+                                <Link to="/pages/contest" className="nav-link p-0 text-muted">
+                                    Contest
+                                </Link>
                             </li>
                             <li className="nav-item mb-2">
-                                <a href="#" className="nav-link p-0 text-muted">
-                                    Pools
-                                </a>
+                            <Link to="/forum" className="nav-link p-0 text-muted">
+                                    Forum
+                                </Link>
                             </li>
                             <li className="nav-item mb-2">
-                                <a href="#" className="nav-link p-0 text-muted">
-                                    Fantasy
-                                </a>
-                            </li>
-                            <li className="nav-item mb-2">
-                                <a href="#" className="nav-link p-0 text-muted">
-                                    SportsBook
-                                </a>
-                            </li>
-                            <li className="nav-item mb-2">
-                                <a href="" className="nav-link p-0 text-muted">
-                                    Media
-                                </a>
-                            </li>
-                            <li className="nav-item mb-2">
-                                <a href="/pages/profile" className="nav-link p-0 text-muted">
+                                <Link to="/pages/profile" className="nav-link p-0 text-muted">
                                     Profile
-                                </a>
+                                </Link>
                             </li>
                             <li className="nav-item mb-2">
-                                <a href="/pages/about" className="nav-link p-0 text-muted">
+                                <Link to="/pages/about" className="nav-link p-0 text-muted">
                                     About
-                                </a>
+                                </Link>
+                            </li>
+                            <li className="nav-item mb-2">
+                                <Link to="/pages/login" className="nav-link p-0 text-muted">
+                                    Login
+                                </Link>
+                            </li>
+                            <li className="nav-item mb-2">
+                                <Link to="/pages/Signup" className="nav-link p-0 text-muted">
+                                    Signup
+                                </Link>
                             </li>
                         </ul>
                     </div>
@@ -81,7 +79,7 @@ function Footer() {
             <div className="footer sdgku">
                 <a href="https://sdgku.edu/" target="_blank" rel="noopener noreferrer">
                     <img
-                        src="https://sdgku.edu/wp-content/uploads/2014/10/sdgku-logo-small.png"
+                        src="/img/SDGKU.jpg"
                         alt=""
                     />
                 </a>

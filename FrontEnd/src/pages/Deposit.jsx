@@ -28,7 +28,7 @@ function Deposit() {
 
     const createPayPalOrder = async (amount) => {
         try {
-            const response = await fetch('https://127.0.0.1:8000/api/wallet', {
+            const response = await fetch('https://127.0.0.1:8000/api/wallet/my_wallet/', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -115,7 +115,7 @@ function Deposit() {
 
     const updateBalance = async (amount) => {
         try {
-            const response = await fetch('https://127.0.0.1:8000/api/wallet', {
+            const response = await fetch('https://127.0.0.1:8000/api/wallet/my_wallet/', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

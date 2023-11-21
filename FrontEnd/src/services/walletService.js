@@ -14,7 +14,7 @@ class WalletService {
 
     async getTransactions() {
         try {
-            const response = await axiosInstance.get('/api/transactions'); // Update the endpoint
+            const response = await axiosInstance.get('/api/transactions/'); // Update the endpoint
             return response.data;
         } catch (error) {
             console.error('Error fetching transactions:', error);

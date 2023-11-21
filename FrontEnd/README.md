@@ -1,70 +1,72 @@
-# Getting Started with Create React App
+QuickBets App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Overview
+QuickBets is a web application that allows users to quickly place bets on various events. The application is built using React for the front end and Python Django for the back end.
 
-## Available Scripts
+Features
+User Authentication: Users can create accounts, log in, and securely authenticate themselves.
+Event Listings: Browse a variety of events available for betting.
+Quick Betting: Place bets quickly with just a few clicks.
+User Dashboard: Track betting history, account details, and winnings.
+Admin Panel: Admins can manage events, users, and view overall system analytics.
 
-In the project directory, you can run:
+Technologies Used
+Frontend: React
+Backend: Python Django
+Database: SqLite
+Authentication: React
+APIs: Paypal, https://rapidapi.com/fluis.lacasse/api/allsportsapi2
 
-### `npm start`
+Installation
+Prerequisites
+Node.js (for React)
+Python (for Django)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Instructions
+Clone the repository:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+git clone [repository-url]
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Navigate to the frontend directory and install dependencies:
 
-### `npm run build`
+npm install
+Navigate to the backend directory and set up the virtual environment:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+cd backend
+python -m venv venv
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Activate the virtual environment:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+On Windows:
+.\venv\Scripts\activate
 
-### `npm run eject`
+On macOS/Linux:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+source venv/bin/activate
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Install backend dependencies:
+pip install -r requirements.txt
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Set up the database:
+python manage.py migrate
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Run the development servers:
 
-## Learn More
+Frontend:
+npm start
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Backend:
+python manage.py runserver
+Open your web browser and go to http://localhost:3000 to access the QuickBets app.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Contributing
+If you would like to contribute to the project, please follow our Contribution Guidelines.
 
-### Code Splitting
+License
+This project is licensed under the SDGKU - see the LICENSE.md file for details.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Acknowledgments
+Adam Young
+Brandon Lile
+Marquice Bowman

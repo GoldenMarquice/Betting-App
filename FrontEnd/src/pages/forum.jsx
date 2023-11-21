@@ -1,6 +1,6 @@
-import React, { useState, Component } from "react";
+import React, { useState } from "react";
+import data from '../services/contestService';
 import "./forum.css";
-import data from '../services/contestService'
 
 function Forum({loadData}) {
   const initialFormData={
@@ -31,30 +31,31 @@ function Forum({loadData}) {
   }
   return (
     <div className="forum page">
-      <div className="panel panel-default post-editor">
+    <div className="panel panel-default post-editor">
         <form onSubmit={handleSubmit} className="panel-body border p-2 rounded shadow">
-          <input
-          type='text'
-          placeholder="Title"
-          name="title"
-          value={formData.title}
-          onChange={handleInputChange}
-          className="form-control"
-          />
-          <input 
-          placeholder="Content"
-          name="content"
-          type="text"
-          value={formData.content}
-          onChange={handleInputChange}
-          className="form-control"
-          />
-          <div className="w-75 d-flex justify-content-end">
-          <button type="submit" className="btn btn-success">Post</button>
-          </div>
+            <input
+                type='text'
+                placeholder="Title"
+                name="title"
+                value={formData.title}
+                onChange={handleInputChange}
+                className="form-control"
+            />
+            <input 
+                placeholder="Content"
+                name="content"
+                type="text"
+                value={formData.content}
+                onChange={handleInputChange}
+                className="form-control"
+            />
+            <div className="d-flex justify-content-end">
+                <button type="submit" className="btn btn-success">Post</button>
+            </div>
         </form>
-      </div>
     </div>
+</div>
+
   );
 }
 

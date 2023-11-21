@@ -5,14 +5,14 @@ class PromotionService {
             {
                 id: "1234532",
                 promotionName: "Sunday Special",
-                price: 5.78,
-                code: 1111,
+                price: 25,
+                code: 8675,
             },
             {
                 id: "1234532",
                 promotionName: "New Account",
-                price: 5.78,
-                code: 2222,
+                price: 50,
+                code: 309,
             }
         ];
     }

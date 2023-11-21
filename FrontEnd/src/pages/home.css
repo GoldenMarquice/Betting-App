@@ -39,7 +39,16 @@
     margin: 10px;
 }
 
-
+.card img {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    height: 80%;
+    width: 30%;
+    box-shadow: 2px 2px 5px #888;
+    margin: 2% auto;
+    display: block;
+    opacity: 0.8;
+}
 .reasons{
     display: flex;
     flex-direction: row;

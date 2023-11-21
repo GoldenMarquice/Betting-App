@@ -1,13 +1,16 @@
 .post-editor {
-    margin: 1rem 20%;
+    margin: 1rem auto; 
+    max-width: 600px;
 }
+
 .panel-body {
     display: flex;
     flex-direction: column;
     gap: 20px;
     width: 100%;
 }
+
 .panel-body input {
-    width: 75%;
-    margin: auto;
+    width: 100%;
+    margin: 0 auto;
 }

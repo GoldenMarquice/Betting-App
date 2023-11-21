@@ -46,22 +46,20 @@ function MainNav() {
                         <Link class="nav-link" to="/pages/contest">Contest</Link>
                     </li>
                     <li class="nav-item">
-                        <Link class="nav-link" to="/pages/forum">Forum</Link>
+                        <Link class="nav-link" to="/forum">Forum</Link>
                     </li>
                     <li class="nav-item">
                         <Link class="nav-link" to="/pages/profile">Profile</Link>
                     </li>
                     <li class="nav-item">
-                        <a href="/pages/about" class="nav-link" aria-disabled="true">About</a>
+                        <Link to="/pages/about" class="nav-link" aria-disabled="true">About</Link>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <Link to="/pages/login" class="nav-link">Login</Link>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" aria-disabled="true">Social</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="/pages/login" class="nav-link">Login</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="/pages/Signup" class="nav-link">SignUp</a></li>
+                        <Link to="/pages/Signup" class="nav-link">SignUp</Link></li>
                     </ul>
                 </div>
         
